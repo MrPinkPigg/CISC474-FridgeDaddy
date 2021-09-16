@@ -1,0 +1,23 @@
+datalist {
+    max-height: 500px;
+    overflow-y: auto;
+}
+.homepage {
+    margin:0;
+}
+
+
+.ing {
+    width: 75%;
+    padding: 10px;
+}
+
+.title {
+    line-height: 100%;
+}
+h1, h2 {
+    color: #001524;
+}
+
+
+ 
