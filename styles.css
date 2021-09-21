@@ -17,7 +17,70 @@ datalist {
 }
 h1, h2 {
     color: #001524;
+    font-family: Open-Sans;
+}
+
+small {
+    font-family: Open-Sans;
+}
+
+@font-face {
+    font-family: regularFont;
+    src: url(assets/fonts/caviar_dreams/CaviarDreams.ttf);
+    /* font-weight: bold; */
+}
+
+@font-face {
+    font-family: boldFont;
+    src: url(assets/fonts/caviar_dreams/CaviarDreams_Bold.ttf);
+    /* font-weight: normal; */
+}
+ 
+@font-face {
+    font-family: italicFont;
+    src: url(assets/fonts/caviar_dreams/CaviarDreams_Italic.ttf);
+    /* font-weight: normal; */
+}
+
+@font-face {
+    font-family: boldItalicFont;
+    src: url(assets/fonts/caviar_dreams/CaviarDreams_BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: princFont;
+    src: url(assets/fonts/print_bv/PRINC___.TTF);
+}
+
+@font-face {
+    font-family: Arvo;
+    src: url(assets/fonts/Arvo/Arvo-Regular.ttf);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(assets/fonts/Lato/Lato-Black.ttf);
+}
+
+@font-face {
+    font-family: Open_Sans;
+    src: url(assets/fonts/Open_Sans/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: arvoItalic;
+    src: url(assets/fonts/Arvo/Arvo-Regular.ttf);
+}
+
+@font-face {
+    font-family: latoItalic;
+    src: url(assets/fonts/Lato/Lato-Black.ttf);
+}
+
+@font-face {
+    font-family: Open_Sans;
+    src: url(assets/fonts/Open_Sans/OpenSans-Light.ttf);
 }
 
 
- 
+
