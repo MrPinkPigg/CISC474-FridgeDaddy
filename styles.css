@@ -21,7 +21,7 @@ h1, h2 {
 
 
 
-/* Sign in and Sign up css */
+/*main sign in/sign up styles*/
 .loginPage {
   width: 360px;
   padding: 8% 0 0;
@@ -37,6 +37,7 @@ h1, h2 {
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+/*input box*/
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
@@ -48,6 +49,7 @@ h1, h2 {
   box-sizing: border-box;
   font-size: 14px;
 }
+/*submit button*/
 .form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -65,6 +67,7 @@ h1, h2 {
 .form button:hover,.form button:active,.form button:focus {
   background: #6a994e;
 }
+/*message w hyperlink*/
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
@@ -107,9 +110,9 @@ h1, h2 {
 .container .info span .fa {
   color: #EF3B3A;
 }
-body {
-  background: #6a994e; /* fallback for old browsers */
+/* body {
+  background: #6a994e;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
-}
+}*/
