@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookbooks</title>
+    <style>
+        div.cookbookMenu {
+            background-color: #A7C957;
+            overflow: auto;
+            white-space: nowrap;
+        }
+
+        div.cookbookMenu a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            text-decoration: none;
+        }
+
+        div.cookbookMenu a:hover {
+            background-color: #6A994E;
+        }
+        div.cookbookButtons {
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body class="cookbookPage">
-    <h1 class="title">My Cookbooks</h1>
+    <h1 class="title">Cookbooks</h1>
+    <div class="cookbookMenu">
+        <a href="index.html" class="cookbookMenuButton">Cookbook 1</a>
+        <a href="index.html" class="cookbookMenuButton">Cookbook 2</a>
+        <a href="index.html" class="cookbookMenuButton">Cookbook 3</a>
+        <a href="index.html" class="cookbookMenuButton">Cookbook 4</a>
+    </div>
+    <div class=cookbookButtons>
+        <h2>Add Cookbook</h2>
+        <h2>Remove Cookbook</h2>
+    </div>
+    <h2 class="title">Add a recipe to a Cookbook</h2>
 </body>
+
 </html>
