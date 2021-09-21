@@ -1,86 +1,3 @@
-/* datalist {
-    max-height: 500px;
-    overflow-y: auto;
-}
-.homepage {
-    margin:0;
-}
-
-
-.ing {
-    width: 75%;
-    padding: 10px;
-}
-
-.title {
-    line-height: 100%;
-}
-h1, h2 {
-    color: #001524;
-    font-family: Open-Sans;
-}
-
-small {
-    font-family: Open-Sans;
-}
-
-@font-face {
-    font-family: regularFont;
-    src: url(assets/fonts/caviar_dreams/CaviarDreams.ttf);
-}
-
-@font-face {
-    font-family: boldFont;
-    src: url(assets/fonts/caviar_dreams/CaviarDreams_Bold.ttf);
-}
- 
-@font-face {
-    font-family: italicFont;
-    src: url(assets/fonts/caviar_dreams/CaviarDreams_Italic.ttf);
-}
-
-@font-face {
-    font-family: boldItalicFont;
-    src: url(assets/fonts/caviar_dreams/CaviarDreams_BoldItalic.ttf);
-}
-
-@font-face {
-    font-family: princFont;
-    src: url(assets/fonts/print_bv/PRINC___.TTF);
-}
-
-@font-face {
-    font-family: Arvo;
-    src: url(assets/fonts/Arvo/Arvo-Regular.ttf);
-}
-
-@font-face {
-    font-family: Lato;
-    src: url(assets/fonts/Lato/Lato-Black.ttf);
-}
-
-@font-face {
-    font-family: Open_Sans;
-    src: url(assets/fonts/Open_Sans/OpenSans-Light.ttf);
-}
-
-@font-face {
-    font-family: arvoItalic;
-    src: url(assets/fonts/Arvo/Arvo-Regular.ttf);
-}
-
-@font-face {
-    font-family: latoItalic;
-    src: url(assets/fonts/Lato/Lato-Black.ttf);
-}
-
-@font-face {
-    font-family: Open_Sans;
-    src: url(assets/fonts/Open_Sans/OpenSans-Light.ttf);
-}
-
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Josefin+Slab:wght@400;700&display=swap');
 
 /*
@@ -206,14 +123,14 @@ datalist {
   
   /* Style the header links */
   .header a {
-  color: #494949 !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #ffffff;
-  padding: 10px;
-  border: 1px solid #494949 !important;
-  display: inline-block;
-  transition: all 0.4s ease 0s;
+	color: #494949 !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #ffffff;
+	padding: 10px;
+	border: 1px solid #494949 !important;
+	display: inline-block;
+	transition: all 0.4s ease 0s;
   }
   
   /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
@@ -222,19 +139,19 @@ datalist {
     padding-top: 15px;
     padding-left: 25px;
     color: #153602 !important;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
+	  text-transform: uppercase;
+	  text-decoration: none;
+	  display: inline-block;
     font-size: 25px;
     font-weight: bold;
   }
   
   /* Change the background color on mouse-over */
   .header a:hover {
-  color: #ffffff !important;
-  background: #A7C957;
-  border-color: #A7C957 !important;
-  transition: all 0.4s ease 0s;
+	color: #ffffff !important;
+	background: #A7C957;
+	border-color: #A7C957 !important;
+	transition: all 0.4s ease 0s;
   }
   
   /* Style the active/current link*/
@@ -255,3 +172,5 @@ datalist {
   .header-left {
       float: left;
   }
+  
+ 
