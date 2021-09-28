@@ -7,43 +7,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookbooks</title>
     <style>
-        div.cookbookMenu {
-            background-color: #A7C957;
-            overflow: auto;
-            white-space: nowrap;
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
         }
 
-        div.cookbookMenu a {
+        .column {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex: 1;
+        }
+
+        .my-recipes-column {
+            text-align: center;
+            background-color: #F2E8CF;
+            height: 200px;
+        }
+
+        .chefdaddy-recipes-column {
+            text-align: center;
+            background-color: #F2E8CF;
+            height: 200px;
+        }
+
+        .cookbookMenu {
+            overflow: auto;
+            white-space: nowrap;
+            margin-bottom: 40px;
+            text-align: center;
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+
+        .cookbookMenu a {
             display: inline-block;
             color: white;
             text-align: center;
             padding: 25px;
             text-decoration: none;
+            font-size: 50px;
         }
 
-        div.cookbookMenu a:hover {
+        .cookbookMenu a:hover {
             background-color: #6A994E;
         }
-        div.cookbookButtons {
-            display: inline-block;
+
+        .cookbookButtons {
+            overflow: auto;
+            white-space: nowrap;
             text-align: center;
+            border-radius: 20px;
+        }
+
+        .cookbookButtons a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .cookbookButtons a:hover {
+            background-color: #6A994E;
+        }
+
+        .cookbookMenuButton {
+            background-color: #A7C957;
+            border-radius: 4px;
+            border: none;
+            padding: 12px 28px;
+            display: inline-block;
+            text-decoration: none;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .addRemoveCookbookButton {
+            background-color: #A7C957;
+            border-radius: 4px;
+            border: none;
+            padding: 12px 28px;
+            display: inline-block;
+            text-decoration: none;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 
 <body class="cookbookPage">
-    <h1 class="title">Cookbooks</h1>
+    <h1 class="title">My Cookbooks</h1>
     <div class="cookbookMenu">
         <a href="index.html" class="cookbookMenuButton">Cookbook 1</a>
         <a href="index.html" class="cookbookMenuButton">Cookbook 2</a>
         <a href="index.html" class="cookbookMenuButton">Cookbook 3</a>
         <a href="index.html" class="cookbookMenuButton">Cookbook 4</a>
+        <a href="index.html" class="cookbookMenuButton">Cookbook 5</a>
+        <a href="index.html" class="cookbookMenuButton">Cookbook 6</a>
     </div>
     <div class=cookbookButtons>
-        <h2>Add Cookbook</h2>
-        <h2>Remove Cookbook</h2>
+        <a href="index.html" class="addRemoveCookbookButton">Add Cookbook</a>
+        <a href="index.html" class="addRemoveCookbookButton">Remove Cookbook</a>
+        <a href="index.html" class="addRemoveCookbookButton">Edit Cookbook</a>
     </div>
-    <h2 class="title">Add a recipe to a Cookbook</h2>
+    <div class="column-layout">
+        <div class="row">
+            <div class="column">
+                <div class="my-recipes-column">
+                    <h2>Add one of my recipes to a Cookbook</h2>
+                    <div class="select">
+                        <select name="format" id="format">
+                            <option selected disabled>Select a recipe</option>
+                            <option value="recipe">Recipe Placeholder</option>
+                            <option value="recipe">Recipe Placeholder</option>
+                            <option value="recipe">Recipe Placeholder</option>
+                        </select>
+                    </div>
+                    <h2>Select a Cookbook to add this recipe to</h2>
+                    <select name="format" id="format">
+                        <option selected disabled>Select a cookbook</option>
+                        <option value="recipe">Cookbook Placeholder</option>
+                        <option value="recipe">Cookbook Placeholder</option>
+                        <option value="recipe">Cookbook Placeholder</option>
+                    </select>
+                </div>
+            </div>
+            <div class="column">
+                <div class="chefdaddy-recipes-column">
+                    <h2>Add a ChefDaddy recipe to a Cookbook</h2>
+                    <div class="select-recipe">
+                        <select name="format" id="format">
+                            <option selected disabled>Select a recipe</option>
+                            <option value="recipe">Recipe Placeholder</option>
+                            <option value="recipe">Recipe Placeholder</option>
+                            <option value="recipe">Recipe Placeholder</option>
+                        </select>
+                    </div>
+                    <h2>Select a Cookbook to add this recipe to</h2>
+                    <div class="select-cookbook">
+                        <select name="format" id="format">
+                            <option selected disabled>Select a cookbook</option>
+                            <option value="recipe">Cookbook Placeholder</option>
+                            <option value="recipe">Cookbook Placeholder</option>
+                            <option value="recipe">Cookbook Placeholder</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>

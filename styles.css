@@ -17,12 +17,6 @@ h2, h3, p, small, li, a {
   font-family: 'Josefin Slab', serif;
 }
 
-datalist {
-    max-height: 500px;
-    overflow-y: auto;
-}
-
-
 .background-image {
   margin-top: 70px;
   background-image: url('assets/bgHomepage.png');
@@ -34,7 +28,6 @@ datalist {
   position: relative;
   overflow: hidden;
   clip-path: ellipse(100% 50% at 50% 0%);
-
 }
 
 .logo-big {
@@ -43,13 +36,16 @@ datalist {
   right: -1000px;
   height: 250px;
   width: 250px;
+  overflow: hidden;
 }
 
 .explain {
   position: relative;
   top: -400px;
   padding-left: 300px;
+  padding-right: 300px;
   margin-top: 75px;
+  overflow: hidden;
 }
 
 .explain p, .explain h3, .explain li {
@@ -68,6 +64,10 @@ datalist {
   font-size: 20px;
 }
 
+.about-daddy {
+  padding-bottom: 30px;
+}
+
 .ing {
   width: 500px;
   height: 30px;
@@ -77,7 +77,7 @@ datalist {
   border-color: #A7C957;
 }
 .homepage {
-  margin:0;
+  margin:0; 
   background-color: #e2e2e24f;
 }
 .title-content {
@@ -96,9 +96,6 @@ datalist {
 .title-content p {
   font-size: 20px;
 }
-
-
-
 
 .title {
     line-height: 100%;
@@ -274,3 +271,4 @@ body {
   }
   
  
+  
