@@ -5,29 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Fridge's</title>
+
+    <script>
+        function addFridge() {
+            var fridge = document.createElement("fridge");
+            fridge.src = "~/assets/fridgeIcon.png";
+            var className = "fridges";
+            fridge.setAttribute("class", className);
+            document.getElementById("fridgeIcons").appendChild(fridge);
+            console.log("fridge added");
+        };
+    </script>
+
 </head>
 
 <body class="fridgepage">
     <div class="grid" style="--bs-columns: 3;">
         <div class="fridge-container">
           <h1>Fridges</h1>
-          <button type="button" class="btn btn-primary">Create New</button>
-          <div class="grid">
             <div class="row">
-                <div class="col">
-                    <figure>
+                <div class="column" id="fridgeIcons">
+                    <!-- <figure> -->
                         <img src="assets/fridgeIcon.png" alt="my fridge"/>
-                        <figcaption>Fridge 1</figcaption>
-                    </figure>
+                        <!-- <figcaption>Fridge 1</figcaption>
+                    </figure> -->
                 </div>
-                <div class="col">
-                    <figure>
+                <!-- <div class="column">
+                    <!-- <figure> -->
                         <img src="assets/fridgeIcon.png" alt="my fridge"/>
-                        <figcaption>Fridge 2</figcaption>
-                    </figure>
-                </div>
+                        <!-- <figcaption>Fridge 2</figcaption> -->
+                    <!-- </figure> -->
+                </div> 
+                <button type="button" class="btn btn-primary" onclick="addFridge()">Create New</button>
             </div>
-        </div>
 </body>
 
 <style>

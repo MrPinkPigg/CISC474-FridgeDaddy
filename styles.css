@@ -13,7 +13,7 @@ h1 {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-h2, h3, p, small, li, a {
+h2, h3, p, small, li, a, button {
   font-family: 'Josefin Slab', serif;
 }
 
@@ -97,9 +97,6 @@ datalist {
   font-size: 20px;
 }
 
-
-
-
 .title {
     line-height: 100%;
     font-size: 60px;
@@ -173,4 +170,30 @@ datalist {
       float: left;
   }
   
- 
+  .fridge-container button {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 10px;
+    border: 1px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+
+  .fridge-container button:hover {
+    color: #ffffff !important;
+    background: #A7C957;
+    border-color: #A7C957 !important;
+    transition: all 0.4s ease 0s;
+  }
+    
+    /* Style the active/current link*/
+    .fridge-container button.active {
+      background-color: #A7C957;
+      color: white;
+    }
+    
+    .row {
+      display: flex;
+    }
