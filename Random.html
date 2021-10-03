@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Recipes</title>
+  </head>
+
+  <style>
+    h1 {
+  color: red;
+  text-align: center;
+} 
+
+h2 {
+  color: rgb(98, 0, 255);
+  text-align: left;
+} 
+body{background-color: burlywood;
+  background-image: url("assets/daddy.png");
+  background-repeat: no-repeat;
+  background-position: right top ;
+  margin-right: 100px;
+ }
+
+  /*Dialog box */
+ .bubble {
+	position: relative;
+  left:38%;
+  
+  
+	width: 400px;
+	height: 300px;
+	border: 1px solid black;
+	-webkit-border-radius: 100%;
+	   -moz-border-radius: 100%;
+	    -ms-border-radius: 100%;
+	     -o-border-radius: 100%;
+	        border-radius: 100%;
+  /*Content */
+  font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 300px;
+}
+.bubble:before,
+.bubble:after {
+	position: absolute;
+  content: "";
+	display: block;
+	border: 1px solid black;
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+	    -ms-border-radius: 50%;
+	     -o-border-radius: 50%;
+	        border-radius: 50%;
+
+}
+/*big circle */
+.bubble:before {
+	width: 50px;
+	height: 50px;
+	bottom: -25px;
+	right: 30px;
+}
+/*small circle */
+.bubble:after {
+	width: 20px;
+	height: 20px;
+	bottom: -50px;
+	right: 0;
+}
+
+
+ 
+  </style>
+  <body>
+    <h1>HOT TOPICS !!!</h1>
+    
+    <div class="bubble">
+      <p1>Choose your topic today ^ ^</p1>
+    </div>
+    <h2>Cuisine</h2>
+    <ul>
+        <li><a href="Random.html" target="_blank">American</a></li>
+        <li><a href="Random.html" target="_blank">Asian</a></li>
+        <li><a href="Random.html" target="_blank">European</a></li>
+      </ul> 
+
+    <h2>Groups</h2>
+    <ul>
+        <li><a href="Random.html" target="_blank">Children</a></li>
+        <li><a href="Random.html" target="_blank">Pregnany Women</a></li>
+        <li><a href="Random.html" target="_blank">Elderly people</a></li>
+      </ul> 
+
+    <h2>Efficacy</h2>
+    <ul>
+        <li><a href="Random.html" target="_blank">Weight loss</li>
+        <li><a href="Random.html" target="_blank">Beauty</a></li>
+      </ul> 
+
+      <a href="index.html">Go back</a>
+
+  </body>
+</html>
