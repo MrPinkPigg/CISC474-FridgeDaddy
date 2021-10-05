@@ -17,7 +17,7 @@
             <a href="/pages/cookbooks/cookbooks.html">Cookbooks</a>
             <a href="/pages/fridges/fridge.html">Fridges</a>
             <a href="/pages/random/RecommendedRecipes.html">Random</a>
-            <a href="#profile">Profile</a>
+            <a href="/profiles/signIn.html">Profile</a>
         </div>
     </div>
     <div class="background-image">
@@ -25,8 +25,11 @@
             <h1 class="title">Fridge Daddy</h1>
             <h2>Bring your ingredients to life.</h2>
             <form>
-                <input class="ing" type="text" placeholder=" Search">
+                <input id="search-bar" class="ing" type="text" placeholder=" Search">
             </form>
+            <a href="search-results.html">
+                <button id="index-button" class="enter-button">Search</button>
+            </a>
             <p>Add your ingredients, we'll do the rest.</p>
         </div>
     </div>
@@ -51,4 +54,5 @@
         </div>
         <img src="assets/daddy.png" class="logo-big" alt="The Fridge Daddy">
 </body>
+<script src="index.js"></script>
 </html>
