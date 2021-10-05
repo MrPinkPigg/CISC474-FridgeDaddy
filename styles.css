@@ -26,6 +26,10 @@ body {
     padding-top: 70px;
 }
 
+img:hover {
+  background: #A7C957;
+}
+
 .background-image {
   margin-top: 70px;
   background-image: url('assets/bgHomepage.png');
@@ -174,6 +178,7 @@ body {
   }
   
   .fridge-container button, input[type="submit"] {
+    margin:0;
     color: #494949 !important;
     text-transform: uppercase;
     text-decoration: none;
@@ -204,7 +209,7 @@ body {
     .modal {
       display: none;
       position: fixed; 
-      padding-top: 50px;
+      padding-top: 100px;
       left: 0; 
       top: 0;
       width: 100%;
@@ -231,6 +236,10 @@ body {
     }
     .close-btn:hover {
       color: darkgray;
+    }
+
+    #newFridgeBtn { 
+      float: right; 
     }
 
     figure figcaption {

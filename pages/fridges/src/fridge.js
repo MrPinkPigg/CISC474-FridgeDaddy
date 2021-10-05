@@ -19,7 +19,7 @@ function addImage(fridgeName){
         emptyRow.parentNode.removeChild(emptyRow);
     }
     var td = fridgeColumn.appendChild(document.createElement('td'));
-    td.innerHTML = "<figure><img src='assets/fridgeIcon.png' onclick=selectFridge()/><figcaption>"+ fridgeName + "</figcaption></figure>";
+    td.innerHTML = "<figure><img src='assets/fridgeIcon.png' name='fridgeImage' id=" + fridgeName + "onclick=selectFridge()/><figcaption>"+ fridgeName + "</figcaption></figure>";
     console.log("made it!")
     table.appendChild(td);
 }

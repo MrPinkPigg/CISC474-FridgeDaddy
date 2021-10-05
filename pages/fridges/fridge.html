@@ -24,20 +24,22 @@
                 </div>
             </div>
             <h1>Fridge's</h1>
-            <table id="fridge-table">
-                <tr>
-                    <td id="fridgeIcons">
-                        <p>You currently have no fridge's.</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="col1">
-                        <form>
-                            <button type="button" class="btn btn-primary" id="newFridgeBtn" data-toggle="modal" data-target="#newFridgeModal" onclick="createNewFridge()">Create New</button>
-                        </form>
-                    </td>
-                </tr>
-             </table>
+            <button type="button" class="btn btn-primary" id="newFridgeBtn" data-toggle="modal" data-target="#newFridgeModal" onclick="createNewFridge()">Create New</button>
+            <div class="active-fridges">
+                <table id="fridge-table">
+                    <tr>
+                        <td id="fridgeIcons">
+                            <p>You currently have no fridge's.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="col1">
+                            <form>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
              <div class="modal">
                 <div class="modal-content">
                         <span class="close-btn" on:click=>&times;</span>
