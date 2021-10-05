@@ -1,0 +1,20 @@
+.main {
+	width: 1200px;
+	margin: 100px auto 0;
+	text-align: center;
+}
+.item {
+	width: 300px;
+	height: 300px;
+	border: 2px solid black;
+}
+.item:hover,
+.item h2:hover {
+	cursor: pointer;
+}
+.main-content {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	line-height: 300px;
+}

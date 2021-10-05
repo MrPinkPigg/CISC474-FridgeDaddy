@@ -1,0 +1,162 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+    background-color: #DEB887;
+}
+h1 {
+	font-family: 'Josefin Sans', sans-serif;
+}
+h2,
+h3,
+p,
+small,
+li,
+a {
+	font-family: 'Josefin Slab', serif;
+}
+.background-image {
+	margin-top: 70px;
+	background-image: url('assets/bgHomepage.png');
+	background-size: 100%;
+	background-position: 0%, 90%;
+	background-attachment: fixed;
+	height: 500px;
+	padding-bottom: 300px;
+	position: relative;
+	overflow: hidden;
+	clip-path: ellipse(100% 50% at 50% 0%);
+}
+.logo-big {
+	position: relative;
+	top: -660px;
+	right: -1000px;
+	height: 250px;
+	width: 250px;
+	overflow: hidden;
+}
+.explain {
+	position: relative;
+	top: -400px;
+	padding-left: 300px;
+	padding-right: 300px;
+	margin-top: 75px;
+	overflow: hidden;
+}
+.explain p,
+.explain h3,
+.explain li {
+	color: #153602;
+}
+.explain h3 {
+	font-size: 40px;
+	line-height: 0px;
+}
+.explain li {
+	font-size: 20px;
+	line-height: 40px;
+}
+.explain p {
+	font-size: 20px;
+}
+.about-daddy {
+	padding-bottom: 30px;
+}
+.ing {
+	width: 500px;
+	height: 30px;
+	border-radius: 25px;
+	border-color: transparent;
+	outline: none;
+	border-color: #A7C957;
+}
+.homepage {
+	margin: 0;
+	background-color: #e2e2e24f;
+}
+.title-content {
+	margin-top: 85px;
+	text-align: center;
+}
+.title-content h1,
+.title-content h2,
+.title-content p {
+	color: #fafafa;
+}
+.title-content h2 {
+	font-size: 30px;
+	font-style: italic;
+}
+.title-content p {
+	font-size: 20px;
+}
+.title {
+	line-height: 100%;
+	font-size: 60px;
+}
+.logo {
+	width: 50px;
+	height: 45px;
+}
+/* Style the header with a grey background and some padding */
+.header {
+	background-color: #DEB887;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	overflow: hidden;
+	padding: 10px 10px;
+	z-index: 10000;
+	box-shadow: 0px 1px 25px rgb(65, 65, 65);
+}
+/* Style the header links */
+.header a {
+	color: #494949 !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #DEB887;
+	padding: 10px;
+	border: 1px solid #494949 !important;
+	display: inline-block;
+	transition: all 0.4s ease 0s;
+}
+.header-left {
+	display: flex;
+	vertical-align: middle;
+	text-align: center;
+	justify-content: center;
+}
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header toincrease when the font gets bigger */
+.header .logo-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 25px;
+	font-weight: bold;
+}
+.logo-title {
+	padding: 10px 0 0 30px;
+}
+/* Change the background color on mouse-over */
+.header a:hover {
+	color: #ffffff !important;
+	background: #A7C957;
+	border-color: #A7C957 !important;
+	transition: all 0.4s ease 0s;
+}
+/* Style the active/current link*/
+.header a.active {
+	background-color: #A7C957;
+	color: white;
+}
+/* Float the link section to the right */
+.header-right {
+	padding-left: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 50px;
+	float: right;
+}

@@ -1,0 +1,32 @@
+.main {
+    width: 1200px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.item {
+    width: 300px;
+    margin: 30px;
+}
+.item img {
+    width: 100%;
+    height: 300px;
+}
+.item h4,.item-text{
+    padding: 8px 8px 0;
+}
+.item-text,
+.item h4 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    width: 300px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.item h4 {
+    -webkit-line-clamp: 1;
+}
