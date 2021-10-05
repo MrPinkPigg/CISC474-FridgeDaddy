@@ -9,11 +9,11 @@ font-family: 'Josefin Slab', serif;
 
 */
 
-h1 {
+h1, label {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-h2, h3, p, small, li, a, button {
+h2, h3, p, small, li, a, button,  option, input[type='submit'] {
   font-family: 'Josefin Slab', serif;
 }
 
@@ -22,6 +22,9 @@ datalist {
     overflow-y: auto;
 }
 
+body {
+    padding-top: 70px;
+}
 
 .background-image {
   margin-top: 70px;
@@ -170,7 +173,7 @@ datalist {
       float: left;
   }
   
-  .fridge-container button {
+  .fridge-container button, input[type="submit"] {
     color: #494949 !important;
     text-transform: uppercase;
     text-decoration: none;
@@ -181,7 +184,7 @@ datalist {
     transition: all 0.4s ease 0s;
     }
 
-  .fridge-container button:hover {
+  .fridge-container button:hover, input[type="submit"]:hover {
     color: #ffffff !important;
     background: #A7C957;
     border-color: #A7C957 !important;
@@ -229,6 +232,13 @@ datalist {
     .close-btn:hover {
       color: darkgray;
     }
+
+    figure figcaption {
+      text-align: center;
+      font-family: 'Josefin Slab', serif;
+  }
+
+
     @-webkit-keyframes animatetop {
       from {top:-300px; opacity:0} 
       to {top:0; opacity:1}

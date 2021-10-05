@@ -7,32 +7,23 @@
     <title>My Fridge's</title>
 </head>
 
-<!-- <body class="fridgepage">
-    <div class="grid" style="--bs-columns: 3;">
+<body class="fridgepage">
+    <script src="src/fridge.js"></script>
         <div class="fridge-container">
-          <h1>Fridges</h1>
-            <div class="row">
-                <div class="column" id="fridgeIcons">
-                    <figure> -->
-                        <!-- <img src="assets/fridgeIcon.png" alt="my fridge"/> -->
-                        <!-- <figcaption>Fridge 1</figcaption>
-                    </figure> -->
-                <!-- </div> -->
-                <!-- <div class="column">
-                     <figure> -->
-                        <!-- <img src="assets/fridgeIcon.png" alt="my fridge"/> -->
-                        <!-- <figcaption>Fridge 2</figcaption> -->
-                    <!-- </figure> -->
-                <!-- </div> 
-                <button type="button" class="btn btn-primary" onclick="addFridge()">Create New</button>
-            </div> -->
-
-    <body class="fridgepage">
-
-        <script src="src/fridge.js"></script>
-
-        <div class="fridge-container">
-            <h1>Fridges</h1>
+            <div class="header">
+                <div class="header-left">
+                    <img src="/assets/daddy.png" class="logo" alt="The Fridge Daddy">    
+                </div>
+                    <h1 class="logo-title">Fridge Daddy</h1>
+                <div class="header-right">
+                    <a href="../../index.html">Home</a>
+                    <a href="/pages/cookbooks/cookbooks.html">Cookbooks</a>
+                    <a class="active" href="/pages/fridges/fridge.html">Fridges</a>
+                    <a href="/pages/random/RecommendedRecipes.html">Random</a>
+                    <a href="#profile">Profile</a>
+                </div>
+            </div>
+            <h1>Fridge's</h1>
             <table id="fridge-table">
                 <tr>
                     <td id="fridgeIcons">
@@ -48,35 +39,30 @@
                 </tr>
              </table>
              <div class="modal">
-                <div class="modal-header">
-                    <span class="close-btn">&times;</span>
-                </div>
                 <div class="modal-content">
+                        <span class="close-btn" on:click=>&times;</span>
                     <h1>Create a New Fridge</h1>
-                    <form>
+                    <form id="new-fridge-form">
                         <div class="form-group">
-                          <label for="formGroupExampleInput">Fridge Name</label>
+                          <label for="fridge-name-input">Fridge Name</label>
                           <input type="text" class="form-control" id="fridge-name-input" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Collaborators</label>
-                            <select multiple class="form-control" id="exampleFormControlSelect2">
+                            <label for="collaborators">Collaborators</label>
+                            <select multiple class="form-control" id="collaborators">
                               <option>Madison</option>
                               <option>Aidan</option>
                               <option>Matt</option>
                               <option>Aaron</option>
                               <option>Xinyi</option>
                             </select>
+                            <br>
+                            <input type="submit" value="Create" id="send">
                     </form>
-                </div>
-                <br>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="addFridge()">Create</button>
                 </div>
             </div>
         </div>
-    </body>
-<!-- </body> -->
+</body>
 
 <style>
     .row {
