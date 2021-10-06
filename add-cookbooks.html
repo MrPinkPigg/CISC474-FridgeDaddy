@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Cookbook</title>
+    <style>
+        h1 {
+            font-size: 60px;
+        }
+        .body {
+            text-align: center;
+        }
+        .cookbook-recipes-input {
+            padding: 10px 40px;
+        }
+        .select {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        .add-cookbook-button {
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 20px;
+            background-color: #F2E8CF;
+            border-radius: 5px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        .add-cookbook-button:hover{
+            background-color: #e6c678;
+        }
+        #add-cookbook-form {
+            font-size: 40px;
+        }
+        #cookbook_desc {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        input[type=text] {
+            width: 14%;
+            padding: 6px 10px;
+            margin-bottom: 20px;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img src="assets/daddy.png" class="logo" alt="The Fridge Daddy">
+        </div>
+        <h1 class="logo-title">Fridge Daddy</h1>
+        <div class="header-right">
+            <a href="index.html">Home</a>
+            <a class="active" href="cookbooks.html">Cookbook</a>
+            <a href="Random.html">Recommended</a>
+            <a href="profiles/signIn.html">Profile</a>
+        </div>
+    </div>
+    <br> <br> <br> <br>
+    <div class="body">
+        <h1>Add a Cookbook</h1>
+        <div id="cookbook-form">
+            <form id="add-cookbook-form">
+                <label for="cookbook_name">Cookbook Name</label>
+                <div class="cookbook-name-input">
+                    <input type="text" id="cookbook_name" name="cookbook_name"
+                        placeholder="Enter a name for your cookbook">
+                </div>
+                <label for="cookbook_recipes">Select Recipes</label>
+                <div class="cookbook-recipes-input">
+                    <select class="select" multiple="multiple">
+                        <option value="1">Recipe Placeholder 1</option>
+                        <option value="2">Recipe Placeholder 2</option>
+                        <option value="3">Recipe Placeholder 3</option>
+                        <option value="4">Recipe Placeholder 4</option>
+                        <option value="5">Recipe Placeholder 5</option>
+                        <option value="6">Recipe Placeholder 6</option>
+                    </select>
+                </div>
+                <div class="cookbook-desc-input">
+                    <label for="cookbook_desc">Write a brief description for your Cookbook</label>
+                    <div class="desc-input">
+                        <textarea id="cookbook_desc" name="cookbook_desc" cols="70" rows="5"
+                            placeholder="Enter a brief description"></textarea>
+                    </div>
+                </div>
+                <div class="add-cookbooks-buttons">
+                    <a href="cookbooks.html" class="add-cookbook-button">Go Back</a>
+                    <a href="cookbooks.html" class="add-cookbook-button">Add Cookbook</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
