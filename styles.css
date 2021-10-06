@@ -13,7 +13,7 @@ h1 {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-h2, h3, p, small, li, a {
+h2, h3, p, small, li, a, td, th, table {
   font-family: 'Josefin Slab', serif;
 }
 
@@ -367,5 +367,34 @@ body {
   margin-top: 30px;
   display: flex;
   justify-content: center;
+}
+
+.recipe-results-title, .recipe-results-table {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-results-title {
+  margin-top: 100px;
+}
+
+/* these are temprary images */
+
+.temp_oc, .temp_hgc, .temp_hcb {
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+}
+
+.row {
+  display: flex;
+  margin-top: 100px;
+}
+
+.column {
+  flex: 50%;
 }
 
