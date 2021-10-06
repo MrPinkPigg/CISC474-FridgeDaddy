@@ -1,107 +1,51 @@
-<!doctype html>
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popular Recipes</title>
-  </head>
+<!DOCTYPE html>
+<html lang="zh">
 
-  <style>
-    h1 {
-  color: red;
-  text-align: center;
-} 
+<head>
+	<meta charset="UTF-8">
+	<meta name="referrer" content="no-referrer">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/radom.css">
+	<link rel="stylesheet" href="./css/public.css">
+	<title>Document</title>
+	<style>
+		a{
+			text-decoration: none;
+			color: #000;
+		}
+	</style>
+</head>
 
-h2 {
-  color: rgb(98, 0, 255);
-  text-align: left;
-} 
-body{background-color: burlywood;
-  background-image: url("assets/daddy.png");
-  background-repeat: no-repeat;
-  background-position: right top ;
-  margin-right: 100px;
- }
+<body>
+	<div class="header">
+		<div class="header-left">
+			<img src="assets/daddy.png" class="logo" alt="The Fridge Daddy">
+			<h1 class="logo-title">Fridge Daddy</h1>
+		</div>
+		<div class="header-right">
+			<a href="./index.html">Home</a>
+			<a href="./cookbooks.html">Cookbook</a>
+			<a class="active" href="./Random.html">Recommended</a>
+			<a href="./profiles/signIn.html">Profile</a>
+		</div>
+	</div>
+	<div class="main">
+		<div class="main-title">
+			<h1>Please choose your cuisine</h1>
+		</div>
+		<div class="main-content">
+			<div class="item">
+				<a href="./Random/RandomChina.html"><h2>China</h2></a>
+			</div>
+			<div class="item">
+				<a href="./Random/RandomJapan.html"><h2>Japan</h2></a>
+			</div>
+			<div class="item">
+				<a href="./Random/RandomUSA.html"><h2>USA</h2></a>
+			</div>
+		</div>
+	</div>
+</body>
 
-  /*Dialog box */
- .bubble {
-	position: relative;
-  left:38%;
-  
-  
-	width: 400px;
-	height: 300px;
-	border: 1px solid black;
-	-webkit-border-radius: 100%;
-	   -moz-border-radius: 100%;
-	    -ms-border-radius: 100%;
-	     -o-border-radius: 100%;
-	        border-radius: 100%;
-  /*Content */
-  font-size: 24px;
-	font-weight: bold;
-	text-align: center;
-	line-height: 300px;
-}
-.bubble:before,
-.bubble:after {
-	position: absolute;
-  content: "";
-	display: block;
-	border: 1px solid black;
-	-webkit-border-radius: 50%;
-	   -moz-border-radius: 50%;
-	    -ms-border-radius: 50%;
-	     -o-border-radius: 50%;
-	        border-radius: 50%;
-
-}
-/*big circle */
-.bubble:before {
-	width: 50px;
-	height: 50px;
-	bottom: -25px;
-	right: 30px;
-}
-/*small circle */
-.bubble:after {
-	width: 20px;
-	height: 20px;
-	bottom: -50px;
-	right: 0;
-}
-
-
- 
-  </style>
-  <body>
-    <h1>HOT TOPICS !!!</h1>
-    
-    <div class="bubble">
-      <p1>Choose your topic today ^ ^</p1>
-    </div>
-    <h2>Cuisine</h2>
-    <ul>
-        <li><a href="Random.html" target="_blank">American</a></li>
-        <li><a href="Random.html" target="_blank">Asian</a></li>
-        <li><a href="Random.html" target="_blank">European</a></li>
-      </ul> 
-
-    <h2>Groups</h2>
-    <ul>
-        <li><a href="Random.html" target="_blank">Children</a></li>
-        <li><a href="Random.html" target="_blank">Pregnany Women</a></li>
-        <li><a href="Random.html" target="_blank">Elderly people</a></li>
-      </ul> 
-
-    <h2>Efficacy</h2>
-    <ul>
-        <li><a href="Random.html" target="_blank">Weight loss</li>
-        <li><a href="Random.html" target="_blank">Beauty</a></li>
-      </ul> 
-
-      <a href="index.html">Go back</a>
-
-  </body>
 </html>

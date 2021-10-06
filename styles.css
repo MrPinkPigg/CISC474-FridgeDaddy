@@ -260,7 +260,7 @@ Sign in and Sign up page styles
   color: #EF3B3A;
 }
 /*bg and for old browsers*/
-body {
+#profiles {
   background: #6a994e;
   font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
