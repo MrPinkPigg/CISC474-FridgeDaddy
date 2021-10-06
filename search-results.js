@@ -3,7 +3,7 @@
 const ingredients = [ "Olive oil", "All purpose flour", "Butter", "Chicken",
     "Sugar", "Salt", "Egg", "Rice", "Vegetable oil", "Pork", "Beef", "Cheese", "Garlic", "Orange",
     "Turkey", "Onion", "Corn", "Whole milk", "Mayonnaise", "Chiles", "Almonds", "Bacon",
-    "Mushrooms", "Coconut", "Beets", "Strawberries", "Fennel", "Lamb", "Apple", "Shrimp"]
+    "Mushrooms", "Coconut", "Beets", "Strawberries", "Fennel", "Lamb", "Apple", "Shrimp", "Honey"]
 var basket = []
 
 function myCreateFunction() {
