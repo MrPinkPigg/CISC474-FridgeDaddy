@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookbooks</title>
     <style>
+        html {
+            background-color: #6a994e;
+        }
+
         .row {
             display: flex;
             flex-direction: row;
@@ -24,27 +28,26 @@
         .my-recipes-column {
             text-align: center;
             background-color: #F2E8CF;
-            height: 200px;
+            height: 230px;
         }
 
-        .chefdaddy-recipes-column {
+        .fridgedaddy-recipes-column {
             text-align: center;
             background-color: #F2E8CF;
-            height: 200px;
+            height: 230px;
         }
 
         .cookbookMenu {
-            overflow: auto;
+            overflow: scroll;
             white-space: nowrap;
             margin-bottom: 40px;
             text-align: center;
-            border: 1px solid white;
             border-radius: 20px;
         }
 
         .cookbookMenu a {
             display: inline-block;
-            color: white;
+            color: black;
             text-align: center;
             padding: 25px;
             text-decoration: none;
@@ -52,7 +55,7 @@
         }
 
         .cookbookMenu a:hover {
-            background-color: #6A994E;
+            background-color: #e6c678;
         }
 
         .cookbookButtons {
@@ -64,7 +67,8 @@
 
         .cookbookButtons a {
             display: inline-block;
-            color: white;
+            font-family: 'Josefin Sans', sans-serif;
+            color: black;
             text-align: center;
             padding: 25px;
             text-decoration: none;
@@ -72,11 +76,11 @@
         }
 
         .cookbookButtons a:hover {
-            background-color: #6A994E;
+            background-color: #e6c678;
         }
 
         .cookbookMenuButton {
-            background-color: #A7C957;
+            background-color: #F2E8CF;
             border-radius: 4px;
             border: none;
             padding: 12px 28px;
@@ -84,10 +88,11 @@
             text-decoration: none;
             margin-left: 30px;
             margin-right: 30px;
+            font-family: 'Josefin Sans', sans-serif;
         }
 
         .addRemoveCookbookButton {
-            background-color: #A7C957;
+            background-color: #F2E8CF;
             border-radius: 4px;
             border: none;
             padding: 12px 28px;
@@ -97,20 +102,38 @@
             margin-right: 30px;
             margin-bottom: 30px;
         }
+
+        .addRecipeButton {
+            background-color: #A7C957;
+            border-radius: 4px;
+            border: none;
+            padding: 12px 28px;
+            display: inline-block;
+            text-decoration: none;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            font-family: 'Josefin Sans', sans-serif;
+            color: black;
+        }
+
+        .addRecipeButton:hover {
+            background-color: #6a994e;
+        }
     </style>
 </head>
 
 <body class="cookbookPage">
     <div class="header">
         <div class="header-left">
-            <img src="assets/daddy.png" class="logo" alt="The Fridge Daddy">    
+            <img src="assets/daddy.png" class="logo" alt="The Fridge Daddy">
         </div>
-            <h1 class="logo-title">Fridge Daddy</h1>
+        <h1 class="logo-title">Fridge Daddy</h1>
         <div class="header-right">
-            <a class="active" href="#home">Home</a>
-            <a href="cookbooks.html">Cookbook</a>
+            <a href="index.html">Home</a>
+            <a class="active" href="cookbooks.html">Cookbook</a>
             <a href="Random.html">Recommended</a>
-            <a href="#profile">Profile</a>
+            <a href="profiles/signIn.html">Profile</a>
         </div>
     </div>
     <br> <br> <br>
@@ -124,7 +147,7 @@
         <a href="index.html" class="cookbookMenuButton">Cookbook 6</a>
     </div>
     <div class=cookbookButtons>
-        <a href="index.html" class="addRemoveCookbookButton">Add Cookbook</a>
+        <a href="add-cookbooks.html" class="addRemoveCookbookButton">Add Cookbook</a>
         <a href="index.html" class="addRemoveCookbookButton">Remove Cookbook</a>
         <a href="index.html" class="addRemoveCookbookButton">Edit Cookbook</a>
     </div>
@@ -148,11 +171,13 @@
                         <option value="recipe">Cookbook Placeholder</option>
                         <option value="recipe">Cookbook Placeholder</option>
                     </select>
+                    <br> <br>
+                    <a href="cookbooks.html" class="addRecipeButton">Add Recipe!</a>
                 </div>
             </div>
             <div class="column">
-                <div class="chefdaddy-recipes-column">
-                    <h2>Add a ChefDaddy recipe to a Cookbook</h2>
+                <div class="fridgedaddy-recipes-column">
+                    <h2>Add a FridgeDaddy recipe to a Cookbook</h2>
                     <div class="select-recipe">
                         <select name="format" id="format">
                             <option selected disabled>Select a recipe</option>
@@ -169,7 +194,10 @@
                             <option value="recipe">Cookbook Placeholder</option>
                             <option value="recipe">Cookbook Placeholder</option>
                         </select>
+                        <br> <br>
+                        <a href="cookbooks.html" class="addRecipeButton">Add Recipe!</a>
                     </div>
+                    <br>
                 </div>
             </div>
         </div>
