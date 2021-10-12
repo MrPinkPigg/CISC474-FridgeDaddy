@@ -371,7 +371,6 @@ Sign in and Sign up page styles
   justify-content: center;
 }
 
-<<<<<<< HEAD
 .recipe-results-title, .recipe-results-table {
   display: flex;
   justify-content: center;
@@ -401,7 +400,6 @@ Sign in and Sign up page styles
   flex: 50%;
 }
 
-=======
 
 .fridge-container button, input[type="submit"] {
     color: #494949 !important;
@@ -573,4 +571,3 @@ Sign in and Sign up page styles
     .fridge-table td {
     border:1px solid #ddd;
     } */
->>>>>>> clientMadison
