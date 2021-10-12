@@ -17,6 +17,14 @@ h2, h3, p, small, li, a, td, th, table {
   font-family: 'Josefin Slab', serif;
 }
 
+h2, h3, p, small, li, a, button, input[type="submit"] {
+  font-family: 'Josefin Slab', serif;
+}
+
+body {
+  padding-top: 70px;
+}
+
 .background-image {
   margin-top: 70px;
   background-image: url('assets/bgHomepage.png');
@@ -286,12 +294,6 @@ Sign in and Sign up page styles
     display: inline-block;
     margin-left: 500px;
   }
-  table, th, td {
-    border: 1px solid black;
-    height: min-content;
-    border-collapse: collapse;
-    width: 30%;
-  }
 
   .result-table {
     display: flex;
@@ -369,6 +371,7 @@ Sign in and Sign up page styles
   justify-content: center;
 }
 
+<<<<<<< HEAD
 .recipe-results-title, .recipe-results-table {
   display: flex;
   justify-content: center;
@@ -398,3 +401,176 @@ Sign in and Sign up page styles
   flex: 50%;
 }
 
+=======
+
+.fridge-container button, input[type="submit"] {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 10px;
+    border: 1px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+}
+
+.fridge-container button:hover, input[type="submit"]:hover {
+    color: #ffffff !important;
+    background: #A7C957;
+    border-color: #A7C957 !important;
+    transition: all 0.4s ease 0s;
+}
+    
+    /* Style the active/current link*/
+.fridge-container button.active {
+    background-color: #A7C957;
+    color: white;
+}
+    
+    .row {
+      display: flex;
+    }
+
+    .modal {
+      display: none;
+      position: fixed; 
+      padding-top: 100px;
+      left: 0; 
+      top: 0;
+      width: 100%;
+      height: 100%; 
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .modal-content {
+      position: relative; 
+      background-color: white;
+      padding: 20px; 
+      margin: auto; 
+      width: 75%;  
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+    }
+    .close-btn {
+      float: right; 
+      color: lightgray; 
+      font-size: 24px;  
+      font-weight: bold;
+    }
+    .close-btn:hover {
+      color: darkgray;
+    }
+
+    #newFridgeBtn { 
+      float:left;
+    }
+
+    figure figcaption {
+      text-align: center;
+      font-family: 'Josefin Slab', serif;
+  }
+
+
+    @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0} 
+      to {top:0; opacity:1}
+    }
+    @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+    }
+
+    input[type="text"], select {
+      width: 100%;
+    }
+  
+    figure:hover {
+      background-color:  #A7C957;
+    }
+
+    .ingredients-container {
+      transition-property: background-color;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in;
+      transition-delay: 0.3s;
+      }
+
+
+  .current-fridges {
+        top: 0px;
+        position: relative;
+        box-sizing: content-box;
+        width: 60%;
+        float: right;
+        height: 400px;
+        overflow: hidden;
+        /* background-color:#153602; */
+        background-color: #A7C957;
+        opacity: 0.9;
+        /* background-color: #f5f4ed; */
+        padding: 10px 10px;
+        box-shadow: 0px 1px 5px rgb(65, 65, 65);
+        }
+
+  .current-ingredients {
+          top: 0px;
+          display:none;
+          position: relative;
+          box-sizing: content-box;
+          width: 80%;
+          height: 400px;
+          overflow: hidden;
+          background-color: #f5f4ed;
+          /* background-color:#153602; */
+          opacity: 0.9;
+          padding: 10px 10px;
+          box-shadow: 0px 1px 5px rgb(65, 65, 65);
+    }      
+
+  .fridge-table table {
+    float: left;
+    width: 100%;
+  }
+
+  .current-ingredients input[type=text] {
+    border: none;
+    background-color: transparent;
+    font-family: 'Josefin Slab', serif;
+    font-size: 5mm;
+}
+
+  
+  .column {
+    flex: 50%;
+  }
+  /* .fridge-table tr {
+    padding-top: 20px;
+    width: 25%;
+  }
+
+  .fridge-table tr:hover {
+    background-color:  #A7C957;
+  } */
+
+
+
+  /* .fridge-table tr, .fridge-table td, .fridge-table th {
+    margin:auto; 
+    }
+
+    .fridge-table td, .fridge-table th {
+    padding:5px;
+    vertical-align:top;
+    }
+
+    .fridge-table th {
+    font-weight:bold;
+    background:#ddd;
+    }
+
+    .fridge-table td {
+    border:1px solid #ddd;
+    } */
+>>>>>>> clientMadison

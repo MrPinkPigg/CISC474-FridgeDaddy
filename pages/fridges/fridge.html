@@ -5,33 +5,601 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Fridge's</title>
+
+<style>
+        h1 {
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    
+    h2, h3, p, small, li, a, button, input[type="submit"] {
+      font-family: 'Josefin Slab', serif;
+    }
+    
+    body {
+      padding-top: 70px;
+    }
+    
+    .background-image {
+      margin-top: 70px;
+      background-image: url('assets/bgHomepage.png');
+      background-size: 100%;
+      background-position: 0%, 90%;
+      background-attachment: fixed;
+      height: 500px;
+      padding-bottom: 300px;
+      position: relative;
+      overflow: hidden;
+      clip-path: ellipse(100% 50% at 50% 0%);
+    }
+    
+    .logo-big {
+      position: relative;
+      top: -660px;
+      right: -1000px;
+      height: 250px;
+      width: 250px;
+      overflow: hidden;
+    }
+    
+    .explain {
+      position: relative;
+      top: -400px;
+      padding-left: 300px;
+      padding-right: 300px;
+      margin-top: 75px;
+      overflow: hidden;
+    }
+    
+    .explain p, .explain h3, .explain li {
+      color:#153602;
+    }
+    .explain h3 {
+      font-size: 40px;
+      line-height: 0px;
+    }
+    
+    .explain li {
+      font-size: 20px;
+      line-height: 40px;
+    }
+    .explain p {
+      font-size: 20px;
+    }
+    
+    .about-daddy {
+      padding-bottom: 30px;
+    }
+    
+    .ing {
+      width: 500px;
+      height: 30px;
+      border-radius: 25px;
+      border-color: transparent;
+      outline: none;
+      border-color: #A7C957;
+    }
+    .homepage {
+      margin:0; 
+      background-color: #e2e2e24f;
+    }
+    .title-content {
+      margin-top: 85px;
+      text-align: center;
+    }
+    
+    .title-content h1, .title-content h2, .title-content p{
+      color: #fafafa;
+    }
+    
+    .title-content h2 {
+      font-size: 30px;
+      font-style: italic;
+    }
+    .title-content p {
+      font-size: 20px;
+    }
+    
+    .title {
+        line-height: 100%;
+        font-size: 60px;
+    }
+    
+    .logo {
+      width: 50px;
+      height: 45px;
+    }
+    /* Style the header with a grey background and some padding */
+    .header {
+      position: fixed;
+      top: 0px;
+      width: 100%;
+        overflow: hidden;
+        background-color: #f5f4ed;
+        padding: 10px 10px;
+        z-index: 10000;
+        box-shadow: 0px 1px 25px rgb(65, 65, 65);
+      }
+      
+      /* Style the header links */
+      .header a {
+        color: #494949 !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #ffffff;
+        padding: 10px;
+        border: 1px solid #494949 !important;
+        display: inline-block;
+        transition: all 0.4s ease 0s;
+      }
+      
+      /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+      .header .logo-title {
+        margin: 0px;
+        padding-top: 15px;
+        padding-left: 25px;
+        color: #153602 !important;
+          text-transform: uppercase;
+          text-decoration: none;
+          display: inline-block;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      
+      /* Change the background color on mouse-over */
+      .header a:hover {
+        color: #ffffff !important;
+        background: #A7C957;
+        border-color: #A7C957 !important;
+        transition: all 0.4s ease 0s;
+      }
+      
+      /* Style the active/current link*/
+      .header a.active {
+        background-color: #A7C957;
+        color: white;
+      }
+      
+      /* Float the link section to the right */
+      .header-right {
+        padding-left: 50px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 50px;
+        float: right;
+      }
+    
+    
+    /*******
+    Sign in and Sign up page styles
+    ********/
+    /*main page info*/
+    .loginPage {
+      width: 360px;
+      padding: 8% 0 0;
+      margin: auto;
+    }
+    .form {
+      position: relative;
+      z-index: 1;
+      background: #f2e8cf;
+      max-width: 360px;
+      margin: 0 auto 100px;
+      padding: 45px;
+      text-align: center;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+    /*input box*/
+    .form input {
+      font-family: 'Josefin Sans', sans-serif;
+      outline: 0;
+      background: #f2f2f2;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    /*submit button*/
+    .form button {
+      font-family: 'Josefin Sans', sans-serif;
+      text-transform: uppercase;
+      outline: 0;
+      background: #6a994e;
+      width: 100%;
+      border: 0;
+      padding: 15px;
+      color: #f2e8cf;
+      font-size: 14px;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer;
+    }
+    .form button:hover,.form button:active,.form button:focus {
+      background: #6a994e;
+    }
+    /*message w hyperlink*/
+    .form .message {
+      margin: 15px 0 0;
+      color: #b3b3b3;
+      font-size: 12px;
+    }
+    .form .message a {
+      color: #6a994e;
+      text-decoration: none;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    .container:before, .container:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .container .info {
+      margin: 50px auto;
+      text-align: center;
+    }
+    .container .info h1 {
+      margin: 0 0 15px;
+      padding: 0;
+      font-size: 36px;
+      font-weight: 300;
+      color: #1a1a1a;
+    }
+    .container .info span {
+      color: #4d4d4d;
+      font-size: 12px;
+    }
+    .container .info span a {
+      color: #000000;
+      text-decoration: none;
+    }
+    .container .info span .fa {
+      color: #EF3B3A;
+    }
+    /*bg and for old browsers*/
+    #profiles {
+      background: #6a994e;
+      font-family: 'Josefin Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;      
+    }
+      .header-left {
+          float: left;
+      }
+      
+      .result-title {
+        margin-top: 100px;
+        text-align: center;
+      }
+    
+      .ing2 {
+        width: 500px;
+        height: 30px;
+        border-radius: 25px;
+        border-color: transparent;
+        outline: none;
+        border-color: #A7C957;
+        margin-top: -70px;
+        display: inline-block;
+        margin-left: 500px;
+      }
+      /* table, th, td {
+        border: 1px solid black;
+        height: min-content;
+        border-collapse: collapse;
+        width: 30%;
+      } */
+    
+      .result-table {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    
+      tr:hover td{
+        cursor:pointer;
+        color: #119267;
+      }
+    
+      #enter {
+        color: #A7C957;
+      }
+    
+    #index-button {
+      margin-top: 10px !important;
+    }
+    .enter-button {
+      appearance: none;
+      backface-visibility: hidden;
+      background-color: #153602;
+      border-radius: 8px;
+      border-style: none;
+      box-shadow: rgba(1, 3, 2, 0.15) 0 4px 9px;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: normal;
+      line-height: 1.5;
+      outline: none;
+      overflow: hidden;
+      padding: 10px 25px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      transform: translate3d(0, 0, 0);
+      transition: all .3s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+    
+    .enter-button:hover {
+      background-color: #1e8449;
+      opacity: 1;
+      transform: translateY(0);
+      transition-duration: .35s;
+    }
+    
+    .enter-button:active {
+      transform: translateY(2px);
+      transition-duration: .35s;
+    }
+    
+    .enter-button:hover {
+      box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+    }
+    
+    
+    .enter {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    
+    .fridge-container button, input[type="submit"] {
+        color: #494949 !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #ffffff;
+        padding: 10px;
+        border: 1px solid #494949 !important;
+        display: inline-block;
+        transition: all 0.4s ease 0s;
+    }
+    
+    .fridge-container button:hover, input[type="submit"]:hover {
+        color: #ffffff !important;
+        background: #A7C957;
+        border-color: #A7C957 !important;
+        transition: all 0.4s ease 0s;
+    }
+        
+        /* Style the active/current link*/
+    .fridge-container button.active {
+        background-color: #A7C957;
+        color: white;
+    }
+        
+        .row {
+          display: flex;
+        }
+    
+        .modal {
+          display: none;
+          position: fixed; 
+          padding-top: 100px;
+          left: 0; 
+          top: 0;
+          width: 100%;
+          height: 100%; 
+          background-color: rgb(0, 0, 0);
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+          position: relative; 
+          background-color: white;
+          padding: 20px; 
+          margin: auto; 
+          width: 75%;  
+          -webkit-animation-name: animatetop;
+          -webkit-animation-duration: 0.4s;
+          animation-name: animatetop;
+          animation-duration: 0.4s
+        }
+        .close-btn {
+          float: right; 
+          color: lightgray; 
+          font-size: 24px;  
+          font-weight: bold;
+        }
+        .close-btn:hover {
+          color: darkgray;
+        }
+    
+        #newFridgeBtn { 
+          float:left;
+        }
+    
+        figure figcaption {
+          text-align: center;
+          font-family: 'Josefin Slab', serif;
+      }
+    
+    
+        @-webkit-keyframes animatetop {
+          from {top:-300px; opacity:0} 
+          to {top:0; opacity:1}
+        }
+        @keyframes animatetop {
+          from {top:-300px; opacity:0}
+          to {top:0; opacity:1}
+        }
+    
+        input[type="text"], select {
+          width: 100%;
+        }
+      
+        figure:hover {
+          background-color:  #A7C957;
+        }
+    
+        .ingredients-container {
+          transition-property: background-color;
+          transition-duration: 0.5s;
+          transition-timing-function: ease-in;
+          transition-delay: 0.3s;
+          }
+    
+    
+      .current-fridges {
+            top: 0px;
+            position: relative;
+            box-sizing: content-box;
+            width: 60%;
+            float: right;
+            height: 400px;
+            overflow: hidden;
+            /* background-color:#153602; */
+            background-color: #A7C957;
+            opacity: 0.9;
+            /* background-color: #f5f4ed; */
+            padding: 10px 10px;
+            box-shadow: 0px 1px 5px rgb(65, 65, 65);
+            }
+    
+      .current-ingredients {
+              top: 0px;
+              display:none;
+              position: relative;
+              box-sizing: content-box;
+              width: 80%;
+              height: 400px;
+              overflow: hidden;
+              background-color: #f5f4ed;
+              /* background-color:#153602; */
+              opacity: 0.9;
+              padding: 10px 10px;
+              box-shadow: 0px 1px 5px rgb(65, 65, 65);
+        }      
+    
+      .fridge-table table {
+        float: left;
+        width: 100%;
+      }
+    
+      .current-ingredients input[type=text] {
+        border: none;
+        background-color: transparent;
+        font-family: 'Josefin Slab', serif;
+        font-size: 5mm;
+    }
+    
+      
+      .column {
+        flex: 50%;
+      }
+</style>
+
 </head>
 
 <body class="fridgepage">
-    <div class="grid" style="--bs-columns: 3;">
+    <script src="src/fridge.js"></script>
         <div class="fridge-container">
-          <h1>Fridges</h1>
-          <button type="button" class="btn btn-primary">Create New</button>
-          <div class="grid">
-            <div class="row">
-                <div class="col">
-                    <figure>
-                        <img src="assets/fridgeIcon.png" alt="my fridge"/>
-                        <figcaption>Fridge 1</figcaption>
-                    </figure>
+            <div class="header">
+                <div class="header-left">
+                    <img src="/assets/daddy.png" class="logo" alt="The Fridge Daddy">    
                 </div>
-                <div class="col">
-                    <figure>
-                        <img src="assets/fridgeIcon.png" alt="my fridge"/>
-                        <figcaption>Fridge 2</figcaption>
-                    </figure>
+                    <h1 class="logo-title">Fridge Daddy</h1>
+                <div class="header-right">
+                    <a href="../../index.html">Home</a>
+                    <a href="/pages/cookbooks/cookbooks.html">Cookbooks</a>
+                    <a class="active" href="/pages/fridges/fridge.html">Fridges</a>
+                    <a href="/pages/random/RecommendedRecipes.html">Random</a>
+                    <a href="#profile">Profile</a>
                 </div>
             </div>
-        </div>
+            <h1>MY FRIDGE'S</h1>
+            <div class="row">                        
+                <div class="column">
+                    <div class="current-fridges">
+                        <table id="fridge-table">
+                                <button type="button" class="btn btn-primary" id="newFridgeBtn" data-toggle="modal" data-target="#newFridgeModal" onclick="createNewFridge()">Create New</button>
+                                <br>
+                                <br>
+                            <tr>
+                                <td id="fridgeIcons">
+                                    <p>You currently have no fridges.</p>
+                                </td>
+                                <td id="col1">
+                                    <form>
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="current-ingredients">
+                        <h2>Add Ingredients</h2>
+                        <form id='ingredient-form'>
+                            <div class='form-group'>
+                                <input id='ingredient-input' type='text' class='form-control' placeholder="type ingredient name here..." required>
+                            </div>
+                            <input type='submit' id='ingredient-add' class='btn btn-danger' value='Add'>
+                        </form>
+                        <!-- </p> -->
+                        <div id="ingredient-checkboxes">
+                        </div>
+                        <!-- <form id="ingredient-submit">
+                            <datalist id="ingredient-list">
+                                <option>First option</option>
+                                <option>Second Option</option>
+                            </datalist>
+                            <input class="ing" type="text" placeholder=" Search" autoComplete="on" list="ingredient-list">
+                        </form> -->
+                        <div id="ingredient-checkboxes">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal">
+                    <div class="modal-content">
+                            <span class="close-btn" on:click=>&times;</span>
+                        <h1>Create a New Fridge</h1>
+                        <form id="new-fridge-form">
+                            <div class="form-group">
+                            <label for="fridge-name-input">Fridge Name</label>
+                            <input type="text" class="form-control" id="fridge-name-input" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="collaborators">Collaborators</label>
+                                <select multiple class="form-control" id="collaborators">
+                                <option>Madison (madholl@udel.edu)</option>
+                                <option>Aidan (achao@udel.edu)</option>
+                                <option>Matt (searfmat@udel.edu)</option>
+                                <option>Aaron (sunxinyi@udel.edu)</option>
+                                <option>Xinyi</option>
+                                </select>
+                                <br>
+                                <input type="submit" value="Create" id="send">
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
 </body>
-
-<style>
-    .row {
-        display: flex;
-    }
-</style>
