@@ -7,68 +7,6 @@
     <title>My Fridge's</title>
 </head>
 
-<!-- <body class="fridgepage">
-    <script src="src/fridge.js"></script>
-        <div class="fridge-container">
-            <div class="header">
-                <div class="header-left">
-                    <img src="/assets/daddy.png" class="logo" alt="The Fridge Daddy">    
-                </div>
-                    <h1 class="logo-title">Fridge Daddy</h1>
-                <div class="header-right">
-                    <a href="../../index.html">Home</a>
-                    <a href="/pages/cookbooks/cookbooks.html">Cookbooks</a>
-                    <a class="active" href="/pages/fridges/fridge.html">Fridges</a>
-                    <a href="/pages/random/RecommendedRecipes.html">Random</a>
-                    <a href="#profile">Profile</a>
-                </div>
-            </div>
-            <h1>Fridge's</h1>
-            <div class="current-fridges">
-                <table id="fridge-table">
-                        <button type="button" class="btn btn-primary" id="newFridgeBtn" data-toggle="modal" data-target="#newFridgeModal" onclick="createNewFridge()">Create New</button>
-                        <br>
-                        <br>
-                    <tr>
-                        <td id="fridgeIcons">
-                            <p>You currently have no fridge's.</p>
-                        </td>
-                        <td id="col1">
-                            <form>
-                            </form>
-                        </td>
-                    </tr>
-                </table>
-                <div class="current-ingredients">
-                    <p>Ingrdients list</p>
-                </div>
-            </div>
-             <div class="modal">
-                <div class="modal-content">
-                        <span class="close-btn" on:click=>&times;</span>
-                    <h1>Create a New Fridge</h1>
-                    <form id="new-fridge-form">
-                        <div class="form-group">
-                          <label for="fridge-name-input">Fridge Name</label>
-                          <input type="text" class="form-control" id="fridge-name-input" placeholder="">
-                        </div>
-                        <div class="form-group">
-                            <label for="collaborators">Collaborators</label>
-                            <select multiple class="form-control" id="collaborators">
-                              <option>Madison</option>
-                              <option>Aidan</option>
-                              <option>Matt</option>
-                              <option>Aaron</option>
-                              <option>Xinyi</option>
-                            </select>
-                            <br>
-                            <input type="submit" value="Create" id="send">
-                    </form>
-                </div>
-            </div>
-        </div>
-</body> -->
-
 <body class="fridgepage">
     <script src="src/fridge.js"></script>
         <div class="fridge-container">
@@ -95,7 +33,7 @@
                                 <br>
                             <tr>
                                 <td id="fridgeIcons">
-                                    <p>You currently have no fridge's.</p>
+                                    <p>You currently have no fridges.</p>
                                 </td>
                                 <td id="col1">
                                     <form>
@@ -112,10 +50,6 @@
                             <div class='form-group'>
                                 <input id='ingredient-input' type='text' class='form-control' placeholder="type ingredient name here..." required>
                             </div>
-                            <!-- <div class='form-group'>
-                                <label for='lname'>Last Name:</label>
-                                <input id='lname' type='text' class='form-control' required>
-                            </div> -->
                             <input type='submit' id='ingredient-add' class='btn btn-danger' value='Add'>
                         </form>
                         <!-- </p> -->
@@ -144,10 +78,10 @@
                             <div class="form-group">
                                 <label for="collaborators">Collaborators</label>
                                 <select multiple class="form-control" id="collaborators">
-                                <option>Madison</option>
-                                <option>Aidan</option>
-                                <option>Matt</option>
-                                <option>Aaron</option>
+                                <option>Madison (madholl@udel.edu)</option>
+                                <option>Aidan (achao@udel.edu)</option>
+                                <option>Matt (searfmat@udel.edu)</option>
+                                <option>Aaron (sunxinyi@udel.edu)</option>
                                 <option>Xinyi</option>
                                 </select>
                                 <br>
