@@ -1,0 +1,203 @@
+ .panel{
+        width: 400px;
+        height: 470px;
+        float: left;
+        background: #FFE4C4;
+        margin-right: 80px;
+        border-radius: 20px;
+        transition-duration: 0.5s;
+        margin-bottom: 60px;
+
+    }
+    .panel:hover{
+        -webkit-box-shadow: #F0F8FF 0px 10px 10px;
+        -moz-box-shadow: #F0F8FF 0px 10px 10px;
+        box-shadow: #F0F8FF 0px 10px 10px;
+    }
+    .panel_img{
+        height: 250px;
+    }
+    .panel_img .img{
+        border-radius: 20px 20px 0px 0px;
+        height: 100%;
+        width: 100%
+    }
+    .panel_main{
+        height: 200px;
+
+    }
+    .panel_main_info .type{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .panel_main_info .name{
+        margin-top: 5px;
+        margin-left: 20px;
+        color: #696969;
+        font-size: 18px;
+    }
+
+    .panel_main_price .price{
+        color: red;
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .panel_main_price .grade{
+        margin-top: 25px;
+    }
+    .panel_main_describe{
+        margin-top: 15px;
+        height: 100px;
+        margin-left: 20px;
+        font-size: 14px;
+        color: gray;
+    }
+    .btn_info{
+        margin-top: 20px;
+    }
+    #main{
+        margin: 0 auto;
+        margin-top: 150px;
+        margin-left: 200px;
+    }
+    .details{
+        height: 600px;
+        width: 1000px;
+        margin-left: 150px;
+    }
+    .details_menu{
+        text-align: center;
+
+    }
+    .details_menu .menu_btn{
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        border: 2px solid red;
+        margin-bottom: 20px;
+    }
+    .details_menu .menu_btn:hover{
+        background-color: #d54215;
+        color: white;
+    }
+
+    .details_right{
+
+    }
+    .details_right .details_right_pic{
+        height: 500px;
+    }
+    .details_right_pic .img{
+        width: 100%;
+        height: 100%;
+    }
+    .details_right .details_right_info{
+        margin-left: 20px;
+    }
+    .text {
+        font-size: 14px;
+    }
+    .item {
+        margin-bottom: 18px;
+    }
+    .text span{
+        font-weight: bold;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        content: "";
+    }
+    .clearfix:after {
+        clear: both
+    }
+
+    .box-card {
+        width: 100%;
+    }
+    .nutritionInfo{
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 15px;
+    }
+
+    /*弹窗*/
+    .el-dialog__header,.el-dialog__title,.el-dialog__body{
+        background-color: #F0E68C;
+    }
+    .idalog_icon{
+        height: 80px;
+        margin: 0 auto;
+        width: 80px;
+        text-align: center;
+        background-color: white;
+        border-radius: 80px;
+    }
+    .idalog_info{
+        text-align: center;
+        margin-top: 30px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 50px;
+        padding: 30px;
+    }
+    .print{
+        height: 650px;
+        width: 1000px;
+        margin-left: 150px;
+        background-color: #FAEBD7;
+    }
+    .print_top{
+        height: 180px;
+        border-bottom: 2px solid gray;
+    }
+    .print_top_right_info{
+        line-height: 35px;padding-left: 10px;
+    }
+    .print_top_right_info span{
+        font-weight: bold;
+    }
+    .print_bottom{
+        height: 420px;
+    }
+    .print_top_left_rate{
+        margin-top: 15px;
+    }
+    .print_top_left_describe{
+        margin-top: 15px;
+    }
+    .print_top_right{
+        width: 400px;
+        height: 100%;
+        float: left;
+    }
+    .print_top_left{
+        width: 600px;
+        height: 100%;
+        float: left;
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+    .print_bottom_left{
+        border-right: 2px solid gray;
+        padding: 15px;
+        margin-top: 15px;
+    }
+    .print_bottom_left p{
+        line-height: 30px;
+    }
+    .print_bottom_right{
+        margin: 15px;
+        padding-left: 15px;
+        margin-top: 30px;
+    }
+    .print_bottom_right h5{
+        line-height: 20px;
+    }
+
+
+    ul,li{ padding:0;margin:0;list-style:none}
