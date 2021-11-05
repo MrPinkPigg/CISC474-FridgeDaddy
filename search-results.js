@@ -2,7 +2,7 @@ fetch("https://yummly2.p.rapidapi.com/feeds/list?start=0&limit=18&tag=list.recip
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "yummly2.p.rapidapi.com",
-		"x-rapidapi-key": "184990ec65msh9785da30b2b5cfcp16a610jsn2c6ce04a83ba"
+		"x-rapidapi-key": "#"
 	}
 })
 .then(response => {
