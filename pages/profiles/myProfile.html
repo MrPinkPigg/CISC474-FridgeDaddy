@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="../../styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My profile</title>
 </head>
-<div class="header">
-    <div class="header-left">
-        <img src="../../favicon.ico" class="logo" alt="The Fridge Daddy">    
-    </div>
+
+<body id="profiles">
+    <div class="header">
+        <div class="header-left">
+            <img src="../../favicon.ico" class="logo" alt="The Fridge Daddy">
+        </div>
         <h1 class="logo-title">Fridge Daddy</h1>
-    <div class="header-right">
-        <a class="active" href="#home">Home</a>
-        <a href="#cookbook">Cookbook</a>
-        <a href="#random">Random</a>
-        <a href="#profile">Profile</a>
+        <div class="header-right">
+            <a class="active" href="#home">Home</a>
+            <a href="#cookbook">Cookbook</a>
+            <a href="#random">Random</a>
+            <a href="#profile">Profile</a>
+        </div>
     </div>
-</div>
+
+    <div id="userDiv">
+        <h1>You're signed in</h1>
+
+        <button>Logout</button>
+    </div>
+
+    <script src="/firebaseInit.js" type="module"></script>
+    <script src="profiles.js"></script>
+
+</body>

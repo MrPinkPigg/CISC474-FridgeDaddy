@@ -11,7 +11,7 @@
 <body id="profiles">
   <div class="header">
     <div class="header-left">
-      <img src="../../daddy.png" class="logo" alt="The Fridge Daddy">
+      <img src="../../favicon.ico" class="logo" alt="The Fridge Daddy">
     </div>
     <h1 class="logo-title">Fridge Daddy</h1>
     <div class="header-right">
@@ -23,14 +23,18 @@
     </div>
   </div>
   <div class="loginPage">
-    <div class="form">
+    <div id="signupDiv" class="form">
       <form class="registerForm">
-        <input type="text" placeholder="name" />
-        <input type="password" placeholder="password" />
+        <!--<input type="text" placeholder="name" />-->
         <input type="text" placeholder="email address" />
-        <button>create</button>
+        <input type="password" placeholder="password" />
+        <button onclick="login()">create</button>
         <p class="message">Already registered? <a href="signIn.html">Sign In</a></p>
       </form>
     </div>
   </div>
+
+  <script src="/firebaseInit.js" type="module"></script>
+  <script src="profiles.js"></script>
+
 </body>

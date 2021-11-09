@@ -23,13 +23,18 @@
     </div>
   </div>
   <div class="loginPage">
-    <div class="form">
+    <div id="loginDiv" class="form">
       <form class="loginForm">
-        <input type="text" placeholder="username" />
-        <input type="password" placeholder="password" />
-        <button>login</button>
+        <input type="text" placeholder="email address" id="emailField" />
+        <input type="password" placeholder="password" id="passwordField" />
+        <button onclick="login()">login</button>
         <p class="message">Not registered? <a href="signUp.html">Create an account</a></p>
       </form>
     </div>
   </div>
+
+
+  <script src="/firebaseInit.js" type="module"></script>
+  <script src="profiles.js"></script>
+
 </body>
