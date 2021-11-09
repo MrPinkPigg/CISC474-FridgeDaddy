@@ -28,13 +28,7 @@
 
 3. Database
 	1. In firebase click the gear icon and select project settings
-	
-	![02a8752d6017a4ee05ffc7e7ac88f4f8.png](:/b02d56e67caf4e27b824e4c3cf0e9df7)
-	
-	2. Click on service accounts
-	
-    ![b37c597a261d70199bf498081d034165.png](:/33f945c3d41541ab81117b21750987db)
-	
+	2. Click on service accounts	
 	3. Generate new private key for node.js, then move that into the same directory as `app.js`
 	4. Copy the code for SDK configuration, and paste in below where we declare `admin`
 	5. Now, anywhere below the initializer we can add firebase code. I used read:
