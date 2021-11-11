@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookbooks</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         html {
             background-color: #6a994e;
@@ -91,6 +93,10 @@
             font-family: 'Josefin Sans', sans-serif;
         }
 
+        .add-button {
+            background-color: #A7C957;;
+        }
+
         .addRemoveCookbookButton {
             background-color: #F2E8CF;
             border-radius: 4px;
@@ -124,6 +130,7 @@
 </head>
 
 <body class="cookbookPage">
+
     <div class="header">
         <div class="header-left">
             <img src="/assets/daddy.png" class="logo" alt="The Fridge Daddy">
@@ -136,71 +143,119 @@
             <a href="profiles/signIn.html">Profile</a>
         </div>
     </div>
-    <br> <br> <br>
-    <h1 class="title">My Cookbooks</h1>
-    <div class="cookbookMenu">
-        <a href="index.html" class="cookbookMenuButton">Cookbook 1</a>
-        <a href="index.html" class="cookbookMenuButton">Cookbook 2</a>
-        <a href="index.html" class="cookbookMenuButton">Cookbook 3</a>
-        <a href="index.html" class="cookbookMenuButton">Cookbook 4</a>
-        <a href="index.html" class="cookbookMenuButton">Cookbook 5</a>
-        <a href="index.html" class="cookbookMenuButton">Cookbook 6</a>
-    </div>
-    <div class=cookbookButtons>
-        <a href="add-cookbooks.html" class="addRemoveCookbookButton">Add Cookbook</a>
-        <a href="index.html" class="addRemoveCookbookButton">Remove Cookbook</a>
-        <a href="index.html" class="addRemoveCookbookButton">Edit Cookbook</a>
-    </div>
-    <div class="column-layout">
-        <div class="row">
-            <div class="column">
-                <div class="my-recipes-column">
-                    <h2>Add one of my recipes to a Cookbook</h2>
-                    <div class="select">
-                        <select name="format" id="format">
-                            <option selected disabled>Select a recipe</option>
-                            <option value="recipe">Recipe Placeholder</option>
-                            <option value="recipe">Recipe Placeholder</option>
-                            <option value="recipe">Recipe Placeholder</option>
-                        </select>
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">My Cookbooks</h1>
+            <p class="lead text-muted">Welcome to your cookbook page. Here you can customize, add, and delete your cookbooks.</p>
+            <p>
+                <a href="#" class="btn add-button my-2">Add cookbooks</a>
+            </p>
+        </div>
+    </section>
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="../../images/cookbook.jpeg" alt="Image of a cookbook">
+                        <div class="card-body">
+                            <h5 class="card-title">Cookbook 1</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus distinctio eius reiciendis consequuntur aperiam est modi obcaecati. Consequatur excepturi dolores possimus nemo, esse quis velit sunt laboriosam dolore nobis.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
+                                </div>
+                                <small class="text-muted">0 recipes</small>
+                            </div>
+                        </div>
                     </div>
-                    <h2>Select a Cookbook to add this recipe to</h2>
-                    <select name="format" id="format">
-                        <option selected disabled>Select a cookbook</option>
-                        <option value="recipe">Cookbook Placeholder</option>
-                        <option value="recipe">Cookbook Placeholder</option>
-                        <option value="recipe">Cookbook Placeholder</option>
-                    </select>
-                    <br> <br>
-                    <a href="cookbooks.html" class="addRecipeButton">Add Recipe!</a>
                 </div>
-            </div>
-            <div class="column">
-                <div class="fridgedaddy-recipes-column">
-                    <h2>Add a FridgeDaddy recipe to a Cookbook</h2>
-                    <div class="select-recipe">
-                        <select name="format" id="format">
-                            <option selected disabled>Select a recipe</option>
-                            <option value="recipe">Recipe Placeholder</option>
-                            <option value="recipe">Recipe Placeholder</option>
-                            <option value="recipe">Recipe Placeholder</option>
-                        </select>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="../../images/cookbook.jpeg" alt="Image of a cookbook">
+                        <div class="card-body">
+                            <h5 class="card-title">Cookbook 2</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus distinctio eius reiciendis consequuntur aperiam est modi obcaecati. Consequatur excepturi dolores possimus nemo, esse quis velit sunt laboriosam dolore nobis.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
+                                </div>
+                                <small class="text-muted">0 recipes</small>
+                            </div>
+                        </div>
                     </div>
-                    <h2>Select a Cookbook to add this recipe to</h2>
-                    <div class="select-cookbook">
-                        <select name="format" id="format">
-                            <option selected disabled>Select a cookbook</option>
-                            <option value="recipe">Cookbook Placeholder</option>
-                            <option value="recipe">Cookbook Placeholder</option>
-                            <option value="recipe">Cookbook Placeholder</option>
-                        </select>
-                        <br> <br>
-                        <a href="cookbooks.html" class="addRecipeButton">Add Recipe!</a>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="../../images/cookbook.jpeg" alt="Image of a cookbook">
+                        <div class="card-body">
+                            <h5 class="card-title">Cookbook 3</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus distinctio eius reiciendis consequuntur aperiam est modi obcaecati. Consequatur excepturi dolores possimus nemo, esse quis velit sunt laboriosam dolore nobis.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
+                                </div>
+                                <small class="text-muted">0 recipes</small>
+                            </div>
+                        </div>
                     </div>
-                    <br>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="../../images/cookbook.jpeg" alt="Image of a cookbook">
+                        <div class="card-body">
+                            <h5 class="card-title">Cookbook 4</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus distinctio eius reiciendis consequuntur aperiam est modi obcaecati. Consequatur excepturi dolores possimus nemo, esse quis velit sunt laboriosam dolore nobis.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
+                                </div>
+                                <small class="text-muted">0 recipes</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="../../images/cookbook.jpeg" alt="Image of a cookbook">
+                        <div class="card-body">
+                            <h5 class="card-title">Cookbook 5</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus distinctio eius reiciendis consequuntur aperiam est modi obcaecati. Consequatur excepturi dolores possimus nemo, esse quis velit sunt laboriosam dolore nobis.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
+                                </div>
+                                <small class="text-muted">0 recipes</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="../../images/cookbook.jpeg" alt="Image of a cookbook">
+                        <div class="card-body">
+                            <h5 class="card-title">Cookbook 6</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus distinctio eius reiciendis consequuntur aperiam est modi obcaecati. Consequatur excepturi dolores possimus nemo, esse quis velit sunt laboriosam dolore nobis.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
+                                </div>
+                                <small class="text-muted">0 recipes</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
