@@ -3,13 +3,9 @@
 // <script src="firebaseInit.js" type="module"></script>
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
-
-   //three different attempts at the import
+//import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
+//import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js";
 //import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
-//import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "/firebase/firebase-auth.js";
-//import('/firebase/firebase-auth.js');
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -28,7 +24,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-   //i THINK this is needed
-//const auth = getAuth(app);
+const app = firebase.initializeApp(firebaseConfig);
+const analytics = firebase.analytics(app);
+
+

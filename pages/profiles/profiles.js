@@ -1,6 +1,6 @@
-const auth = getAuth();
+const auth = firebase.auth(app);
 
-onAuthStateChanged(auth, (user) => {
+function onAuthStateChanged(auth, user) {
   if (user) {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
@@ -14,7 +14,7 @@ onAuthStateChanged(auth, (user) => {
     window.location.href = "signIn.html"
 
   }
-});
+}
 
 function signUp() {
   var userEmail = document.getElementById("emailField").value;
@@ -35,14 +35,21 @@ function signUp() {
 
 }
 
-function signIn() {
+
+/*
+TEST LOGIN:
+aaronknestaut@gmail.com
+testAccount
+*/
+function signIn() { 
   var userEmail = document.getElementById("emailField").value;
   var userPassword = document.getElementById("passwordField").value;
 
-  signInWithEmailAndPassword(auth, userEmail, userPassword)
+  auth.signInWithEmailAndPassword(userEmail, userPassword)
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
+      window.alert("Signed In: " + userEmail);
       // ...
     })
     .catch((error) => {
