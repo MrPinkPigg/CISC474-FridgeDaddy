@@ -2,7 +2,7 @@
 //ADD TO HEAD BEFORE ANY OTHER <script> TAGS:
 // <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase.js"></script>
 
-// Import the functions you need from the SDKs you need
+// old imports (maybe not needed?)
 //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
 //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js";
 //import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js";
