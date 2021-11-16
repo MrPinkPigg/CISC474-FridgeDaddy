@@ -146,7 +146,7 @@ new Vue({
             }
         },
         methods:{
-            // 返回上一层
+            // Return to previous 
             rollBackBtn(){
                 this.showList = true;
                 this.showInfo = false;
