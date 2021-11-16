@@ -1,59 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/assets/daddy.png"/>
-    <title>FridgeDaddy</title>
-</head>
-<body class="homepage">
-    <div class="header">
-        <div class="header-left">
-            <img src="assets/daddy.png" class="logo" alt="The Fridge Daddy">    
-        </div>
-            <h1 class="logo-title">Fridge Daddy</h1>
-        <div class="header-right">
-            <a class="active" href="index.html">Home</a>
-            <a href="/cookbooks.html">Cookbooks</a>
-            <a href="/pages/fridges/fridge.html">Fridges</a>
-            <a href="/Random.html">Random</a>
-            <a href="pages/profiles/signIn.html">Profile</a>
-        </div>
-    </div>
-    <div class="background-image">
-        <div class="title-content">
-            <h1 class="title">Fridge Daddy</h1>
-            <h2>Bring your ingredients to life.</h2>
-            <form>
-                <input id="search-bar" class="ing" type="text" placeholder=" Search">
-            </form>
-            <a href="search-results.html">
-                <button id="index-button" class="enter-button">Search</button>
-            </a>
-            <p>Add your ingredients, we'll do the rest.</p>
-        </div>
-    </div>
-    <div class="explain">
-        <div class="about-daddy">
-            <h3>About the Fridge Daddy</h3>
-            <p>
-                This site contains a database af hundrends of recipes! Input what ingredients you have on hand, and we'll 
-                match you up with some recipes that use all or most of the selected ingredients. 
-            </p>
-            <p>
-                Create an account to add your favorite recipes to your Cookbook for easy sharing. 
-            </p>
-        </div>
-            <h3>How it works...</h3>
-            <ul>
-                <li>Add ingredients</li>
-                <li>Find recipes</li>
-                <li>Start cooking</li>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Fridge Daddy</title>
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-egg-fill" viewBox="0 0 16 16">
+                <path d="M14 10a6 6 0 0 1-12 0C2 5.686 5 0 8 0s6 5.686 6 10z"/>
+              </svg>
+            
+            Fridge Daddy
+        </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Browse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white">My Cookbooks</a>
+              </li>
             </ul>
-            <p>Alternatively, view all recipes or generate a random recipe</p>
+            <form class="d-flex">
+              <button class="btn btn-outline-light" type="submit">Log In</button>
+            </form>
+          </div>
         </div>
-        <img src="assets/daddy.png" class="logo-big" alt="The Fridge Daddy">
-</body>
-<script src="index.js"></script>
+      </nav>
+    
+
+      <div class="container my-5 pt-lg-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+          <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+            <h1 class="display-4 fw-bold lh-1 pb-4">Your ingredients, our recipes.</h1>
+            <p class="lead pb-4">Simply add the ingredients you have on hand, and we'll search our databases to find the recipes you can make right away. Create cookbooks with your favorites, and share them with friends and family! Save. Cook. Share. Repeat.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+              <button type="button" class="btn btn-success btn-lg px-4 me-md-2 fw-bold">Search</button>
+              <button type="button" class="btn btn-outline-success btn-lg px-4">Log In</button>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+              <img class="rounded-lg-3" src="pudding.png" alt="" width="720">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="bg-success text-secondary px-4 text-center">
+        <div class="py-5">
+          <h1 class="display-5 fw-bold text-white">Add Ingredients</h1>
+          <div class="col-lg-6 mx-auto">
+
+            <div class="input-group py-3">
+                <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                  <option selected>Choose...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+
+
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button type="button" class="btn btn-outline-light btn-lg px-4">Let's Go!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <table class="table mt-4 mx-auto w-50 table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Ingredient</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chicken</td>
+            <td class="d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
+                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
+                    </svg>
+                  </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Pinto Beans</td>
+            <td class="d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
+                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
+                    </svg>
+                  </button>
+            </td>
+          </tr>
+          
+
+          <tr>
+            <td>Cilantro</td>
+            <td class="d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
+                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
+                    </svg>
+                  </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>White Rice</td>
+            <td class="d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
+                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
+                    </svg>
+                  </button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
 </html>
