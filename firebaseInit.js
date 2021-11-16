@@ -13,7 +13,7 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
-   apiKey: "AIzaSyCq0ziu2IydVWtN89EErVwdaQ0GDRlFELc",
+   apiKey: "",
    authDomain: "fridgedaddy-ud21.firebaseapp.com",
    databaseURL: "https://fridgedaddy-ud21-default-rtdb.firebaseio.com",
    projectId: "fridgedaddy-ud21",
