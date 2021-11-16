@@ -105,6 +105,11 @@
     
     <script src="../../firebaseInit.js"></script>
     <script src="../cookbooks/add-cookbooks.js"></script>
+    <script>
+        var form = document.getElementById("add-cookbook-form");
+        function handleForm(event) { event.preventDefault(); }
+        form.addEventListener('submit', handleForm);
+    </script>
 
 </body>
 
