@@ -1,18 +1,51 @@
-// Inital firebase pulls can be called from here
-// Use the router gets to add the different pages to the sitemap
-// See the README in the repo on how to properly set eveything up with GETs from firebase
-// Can store them in local storage on browser as opposed to 
-
 const express = require('express');
 const app = express();
 const path = require('path');
 const router = express.Router();
+var admin = require("firebase-admin");
+//update to local path
+var serviceAccount = require("C:/Users/Matthew/Desktop/UDine/CISC474-UDine/fridgedaddy-ud21-firebase-adminsdk-46k31-eeba761a04.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://fridgedaddy-ud21-default-rtdb.firebaseio.com"
+});
 
 router.get('/',function(req, res){
   res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-//add the router
+router.get('/search',function(req, res){
+  res.sendFile(path.join(__dirname+'/recipe-results.html'));
+});
+
+app.get('/recipes', function(req, res) {
+  var ref = admin.database().ref('recipes/recipe/');
+  ref.on("value", function(snapshot) {
+    res.send(snapshot.val());
+}, function (error) {
+  console.log("Error: " + error.code);
+  });
+});
+
+app.get('/tags', function(req, res) {
+  var dropdown = []
+  var ref = admin.database().ref('recipes/recipe/');
+  ref.on("value", function(snapshot) {
+  for(var i = 0; i < snapshot.val().length; i++) {
+    // TODO: need to update tags
+    for(var j = 0; i < 7 /* snapshot.val()[i].tag.length */; i++) {
+      if(!dropdown.includes(snapshot.val()[i].tag[j])) {
+        dropdown.push(snapshot.val()[i].tag[j]);
+      }
+    }
+  } res.send(dropdown);
+}, function (error) {
+  console.log("Error: " + error.code);
+  });
+});
+
+app.use('/public', express.static(path.join(__dirname, "public")));
 app.use('/', router);
 app.listen(process.env.port || 3000);
 

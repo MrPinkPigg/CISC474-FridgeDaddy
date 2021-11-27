@@ -1,8 +1,16 @@
-fetch("/recipes.json")
-.then(response => {
-   return response.json();
-})
-.then(data => makeCards(data));
+window.onload = function() {
+    var ing_list = JSON.parse(localStorage.getItem("ing_list"))
+    $.ajax({
+        type: 'GET',
+        url: 'http://localhost:3000/recipes',
+        success: function(res) {
+
+        },
+        error: function(xhr, status, err) {
+           console.log(xhr.responseText);
+        }
+     });
+ }
 
 function makeCards(obj) {
     for(var i = 0; i < obj.recipe.length; i += 3) {

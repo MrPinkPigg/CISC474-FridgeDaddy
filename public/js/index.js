@@ -1,8 +1,27 @@
 let ing_list = [];
 
+$.ajax({
+   type: 'GET',
+   url: 'http://localhost:3000/tags',
+   success: function(res) {
+      for(var i = 0; i < res.length; i++) {
+         document.getElementById('inputGroupSelect').innerHTML += '<option value="' + res[i] + '">' + res[i] + '</option>';
+      }
+   },
+   error: function(xhr, status, err) {
+      console.log(xhr.responseText);
+   }
+});
+
+window.onload = function() {
+   document.getElementById("go").onclick = function() {
+       localStorage.setItem("ing_list", JSON.stringify(ing_list));
+   }
+}
+
+
 document.addEventListener('input', function (event) {
 	if (event.target.id !== 'inputGroupSelect') return;
-   console.log(event.target.options[event.target.selectedIndex].text);
    if(!ing_list.includes(event.target.options[event.target.selectedIndex].text) && event.target.options[event.target.selectedIndex].text != "Choose...") {
       ing_list.push(event.target.options[event.target.selectedIndex].text);
       updateList();
@@ -24,8 +43,8 @@ function deletes() {
    document.querySelectorAll('#delete-button').forEach(item => {
       item.addEventListener('click', event => {
         ing_list.splice(ing_list.indexOf(item.closest("tr").firstChild.textContent), 1);
-        console.log(ing_list);
         updateList();
       })
     })
 }
+
