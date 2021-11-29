@@ -17,11 +17,21 @@ function makeCards(obj) {
     var cards = []
 
     for(var i = 0; i < obj.length; i++) {
-        if(!cards.includes(obj[i].name)) {
-            if(obj[i].tag.some(r=> ing_list.indexOf(r) >= 0)) {
+        if(obj[i].tag.some(r=> ing_list.indexOf(r) >= 0)) {
+            if(!cards.includes(obj[i].name)) {
                 cards.push(obj[i].name);
-                document.getElementById('list').innerHTML += '<div class="card" style="width: 18rem;"><img src="' + obj[i].image + '" class="card-img-top" alt="..."><div class="card-body">' +
-                  '<h5 class="card-title"><a href="#" class="stretched-link link-dark" style="text-decoration: none;">' + obj[i].name + '</a></h5><p class="card-text">' + obj[i].description + '</p></div></div>';
+            } else {
+                cards.splice(cards.indexOf(obj[i].name), 1);
+                cards.unshift(obj[i].name);
+            }
+        }
+    }
+    console.log(cards);
+    for(var i = 0; i < cards.length; i++) {
+        for(var j = 0; j < obj.length; j++) {
+            if(obj[j].name == cards[i]) {
+                document.getElementById('list').innerHTML += '<div class="card mb-3" style="width: 18rem;"><img src="' + obj[j].image + '" class="card-img-top" alt="..."><div class="card-body">' +
+                '<h5 class="card-title"><a href="/recipe" class="stretched-link link-dark" style="text-decoration: none;">' + obj[j].name + '</a></h5><p class="card-text">' + obj[j].description + '</p></div></div>';
             }
         }
     }

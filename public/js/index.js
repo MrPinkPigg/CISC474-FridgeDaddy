@@ -4,6 +4,7 @@ $.ajax({
    type: 'GET',
    url: 'http://localhost:3000/tags',
    success: function(res) {
+      console.log( res );
       for(var i = 0; i < res.length; i++) {
          document.getElementById('inputGroupSelect').innerHTML += '<option value="' + res[i] + '">' + res[i] + '</option>';
       }

@@ -19,6 +19,10 @@ router.get('/search',function(req, res){
   res.sendFile(path.join(__dirname+'/recipe-results.html'));
 });
 
+router.get('/recipe',function(req, res){
+  res.sendFile(path.join(__dirname+'/recipe.html'));
+});
+
 app.get('/recipes', function(req, res) {
   var ref = admin.database().ref('recipes/recipe/');
   ref.on("value", function(snapshot) {
@@ -33,8 +37,7 @@ app.get('/tags', function(req, res) {
   var ref = admin.database().ref('recipes/recipe/');
   ref.on("value", function(snapshot) {
   for(var i = 0; i < snapshot.val().length; i++) {
-    // TODO: need to update tags
-    for(var j = 0; i < 7 /* snapshot.val()[i].tag.length */; i++) {
+    for(var j = 0; j < snapshot.val()[i].tag.length; j++) {
       if(!dropdown.includes(snapshot.val()[i].tag[j])) {
         dropdown.push(snapshot.val()[i].tag[j]);
       }
