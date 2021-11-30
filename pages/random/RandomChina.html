@@ -9,6 +9,7 @@
     <!-- import Elementui CSS -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" type="text/css" href="../../css/radomA.css">
+    <link rel="stylesheet" type="text/css" href="../../css/new.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,9 +20,13 @@
     </div>
     <div class="header-right">
         <a href="../../index.html">Home</a>
+        <a class="nav-link text-white" href="../random/RandomChina.html">Browse</a>
+
+    <!--
         <a href="../../cookbooks.html">Cookbook</a>
         <a class="active" href="../Random.html">Recommended</a>
         <a href="../../profiles/signIn.html">Profile</a>
+    -->
     </div>
 </div>
 <div id="main">
@@ -57,128 +62,162 @@
         </div>
     </div>
 
-    <!-- 详情 -->
-    <el-button v-if = "showInfo"><el-link  type="primary" @click="rollBackBtn()">RollBACK</el-link></el-button>
-    <div class = "details" v-if = "showInfo">
+    <!-- details -->
+    <el-button v-if="showInfo">
+        <el-link type="primary" @click="rollBackBtn()">RollBACK</el-link>
+    </el-button>
+    <div class="details" v-if="showInfo">
         <el-row>
-            <el-col :span="2">
-                <div class="details_menu">
-                    <div class="menu_btn">
-                        <div class="icon">
-                            <el-i class="el-icon-notebook-2" style="color: red;margin-top: 10px;"></el-i>
-                        </div>
-                        <div>Info</div>
-                    </div>
-                    <div class="menu_btn" @click="showSaveBtn()">
-                        <div class="icon">
-                            <el-i class="el-icon-star-off" style="color: red;margin-top: 10px;"></el-i>
-                        </div>
-                        <div>Save</div>
-                    </div>
-                    <div class="menu_btn" @click="showPrintBtn()">
-                        <div class="icon">
-                            <el-i class="el-icon-printer" style="color: red;margin-top: 10px;"></el-i>
-                        </div>
-                        <div>Print</div>
-                    </div>
+            <!-- <el-col :span="2">
+        <div class="details_menu">
+            <div class="menu_btn">
+                <div class="icon">
+                    <el-i class="el-icon-notebook-2" style="color: red;margin-top: 10px;"></el-i>
                 </div>
-            </el-col>
-            <el-col :span="22">
+                <div>Info</div>
+            </div>
+            <div class="menu_btn" @click="showSaveBtn()">
+                <div class="icon">
+                    <el-i class="el-icon-star-off" style="color: red;margin-top: 10px;"></el-i>
+                </div>
+                <div>Save</div>
+            </div>
+            <div class="menu_btn" @click="showPrintBtn()">
+                <div class="icon">
+                    <el-i class="el-icon-printer" style="color: red;margin-top: 10px;"></el-i>
+                </div>
+                <div>Print</div>
+            </div>
+        </div>
+    </el-col> -->
+            <el-col :span="24">
                 <div class="details_right">
                     <el-row>
-                        <el-col :span="17"><div class="details_right_pic">
-                            <el-image class="img" :src="itemInfo.picture"></el-image>
-                        </div></el-col>
-                        <el-col :span="7"><div class="details_right_info">
-                            <el-card class="box-card" style="border: 0;background-color: #FAEBD7;opacity:0.5;">
-                                <div slot="header" class="clearfix">
-                                    <span>Info</span>
-                                    <el-button style="float: right; padding: 3px 0" type="text">
-                                        <el-i class="el-icon-timer" style="font-size: 30px;"></el-i>
-                                    </el-button>
-                                </div>
-                                <div class="text item"><span>Prep：</span>5 mins</div>
-                                <div class="text item"><span>Cook：</span>20 mins</div>
-                                <div class="text item"><span>Total：</span>25 mins</div>
-                                <div class="text item"><span>Servings：</span>2</div>
-                                <div class="text item"><span>Yield：</span>2 servings</div>
-                                <div class="nutritionInfo" >Nutrition Info</div>
-                            </el-card>
-                        </div></el-col>
+                        <el-col :span="24">
+                            <div class="details_right_pic">
+                                <el-image class="img" :src="itemInfo.picture"></el-image>
+                            </div>
+                        </el-col>
                     </el-row>
                 </div>
             </el-col>
         </el-row>
+        <div class="details_menu">
+            <!-- <div class="menu_btn">
+        <div class="icon">
+            <el-i class="el-icon-notebook-2" style="color: red;margin-top: 10px;"></el-i>
+        </div>
+        <div>Info</div>
+    </div>
+    <div class="menu_btn" @click="showSaveBtn()">
+        <div class="icon">
+            <el-i class="el-icon-star-off" style="color: red;margin-top: 10px;"></el-i>
+        </div>
+        <div>Save</div>
+    </div> -->
+            <div class="menu_btn" @click="showPrintBtn()">
+                <div class="icon">
+                    <el-icon class="el-icon-printer" style="color: red;margin-top: 10px;"></el-icon>
+                </div>
+                <div>Print</div>
+            </div>
+        </div>
+        <div v-if="itemInfo.materials&&itemInfo.materials.length>0" class="introduce">
+            <h2>Ingredients</h2>
+            <div class="ings">
+                <table>
+                    <tr v-for="(item,index) in itemInfo.materials" :key="index">
+                        <td class="name">
+                            <a href="javascript:;">{{item.name}}</a>
+                        </td>
+                        <td class="unit" v-html="item.text">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <h2 v-if="itemInfo.steps&&itemInfo.steps.length>0" style="margin-top:30px;">Steps</h2>
+        <div v-if="itemInfo.steps&&itemInfo.steps.length>0" class="steps">
+            <ol>
+                <li class="container" v-for="(item,index) in itemInfo.steps" :key="index">
+                    <span>{{item.name}}</span>
+                    <p class="text" v-html="item.text"></p>
+                </li>
+            </ol>
+        </div>
     </div>
 
-    <!-- 打印 -->
-    <el-button v-if = "showPrint"><el-link  type="primary" @click="rollBackPrintBtn()">RollBACK</el-link></el-button>
-    <div class = "print" v-if = "showPrint">
+    <!-- print -->
+    <el-button v-if="showPrint">
+        <el-link type="primary" @click="rollBackPrintBtn()">RollBACK</el-link>
+    </el-button>
+    <div class="print" v-if="showPrint">
         <div class="print_top">
-            <div class= "print_top_left" >
+            <div class="print_top_left">
                 <h2>{{itemInfo.name}}</h2>
                 <div class="print_top_left_rate">
-                    <el-rate v-model="itemInfo.grade" disabled show-score text-color="#ff9900" :score-template="itemInfo.grade"></el-rate>
+                    <el-rate v-model="itemInfo.grade" disabled show-score text-color="#ff9900"
+                        :score-template="itemInfo.grade+''"></el-rate>
                 </div>
                 <div class="print_top_left_describe">{{itemInfo.describe}}</div>
             </div>
-            <div class= "print_top_right" >
-                <el-row>
-                    <el-col :span="10"><div class="print_top_right_info" >
-                        <p><span>Prep：</span>5 mins</p>
-                        <p><span>Cook：</span>20 mins</p>
-                        <p><span>Total：</span>25 mins</p>
-                        <p><span>Servings：</span>2</p>
-                        <p><span>Yield：</span>2 servings</p>
-                    </div></el-col>
-                    <el-col :span="14"><div class="details_right_pic">
-                        <el-image class="img" :src="itemInfo.picture"></el-image>
-                    </div></el-col>
-
-                </el-row>
+            <div class="print_top_right">
+                <div style="height:178px;text-align: right;">
+                    <el-image class="img" style="height:178px;" :src="itemInfo.picture"></el-image>
+                </div>
             </div>
         </div>
-        <div class="print_bottom" >
+        <div class="print_bottom">
 
             <el-row>
-                <el-col :span="6">
+                <el-col :span="10">
+
                     <div class="print_bottom_left">
-                        <h2>Ingredients</h2>
-                        <p>1 serving cooking spray</p>
-                        <p>1 tablespoon butter, melted</p>
-                        <p>1 tablespoon hot honey (such as Mike's Hot Honey®)</p>
-                        <p>1 teaspoon grated orange zest</p>
-                        <p>½ teaspoon ground cardamom</p>
-                        <p>½ pound baby carrots</p>
-                        <p>1 tablespoon freshly squeezed orange juice</p>
-                        <p>1 pinch salt and ground black pepper to taste</p>
+                        <div v-if="itemInfo.materials&&itemInfo.materials.length>0" class="introduce">
+                            <h2>Ingredients</h2>
+                            <div class="ings">
+                                <table>
+                                    <tr v-for="(item,index) in itemInfo.materials" :key="index">
+                                        <td class="name">
+                                            <a href="javascript:;">{{item.name}}</a>
+                                        </td>
+                                        <td class="unit" v-html="item.text">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </el-col>
-                <el-col :span="18">
+                <el-col :span="14">
                     <div class="print_bottom_right">
-                        <h2>Directions</h2>
-                        <h5>Step 1</h5>
-                        <p>Preheat an air fryer to 400 degrees F (200 degrees C). Spray the basket with nonstick cooking spray.</p>
-                        <h5>Step 2</h5>
-                        <p>Combine butter, honey, orange zest, and cardamom in a bowl. Remove 1 tablespoon of the sauce to a separate bowl and set aside. Add carrots to the remaining sauce and toss until all are well coated. Transfer carrots to the air fryer basket.</p>
-                        <h5>Step 3</h5>
-                        <p>Air fry until carrots are roasted and fork tender, tossing every 7 minutes, for 15 to 22 minutes. Mix orange juice with reserved honey-butter sauce. Toss with carrots until well combined. Season with salt and pepper.</p>
-                        <h2>Nutrition Facts</h2>
-                        <h5>Per Serving: <p>129 calories; protein 0.9g; carbohydrates 19.3g; fat 6.1g; cholesterol 15.3mg; sodium 206.4mg.</span></h5>
+                        <div class="introduce">
+                            <h2 v-if="itemInfo.steps&&itemInfo.steps.length>0" style="margin-top:30px;">Steps</h2>
+                            <div v-if="itemInfo.steps&&itemInfo.steps.length>0" class="steps">
+                                <ol>
+                                    <li class="container" v-for="(item,index) in itemInfo.steps" :key="index">
+                                        <span>{{item.name}}</span>
+                                        <p class="text" v-html="item.text"></p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                 </el-col>
             </el-row>
 
         </div>
     </div>
+    
 
-    <!-- Save弹窗 -->
+    <!-- 
     <el-dialog :visible.sync="showSave" width="15%">
         <div class="idalog_icon">
             <el-i class="el-icon-star-on" style="font-size: 60px;color: #F0E68C;margin-top: 10px;"></el-i>
         </div>
         <div class ="idalog_info" >Congrats! You saved Air Fryer Sweet and Spicy Roasted Carrots to your Favorites</div>
     </el-dialog>
+    Save弹窗 -->
 
 </div>
 </body>
@@ -187,6 +226,5 @@
 <!-- import JavaScript -->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script src="../../js/randomA.js"></script >
-<script type="text/javascript">
-</script>
+
 </html>

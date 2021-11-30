@@ -124,7 +124,7 @@
         margin-bottom: 15px;
     }
 
-    /*弹窗*/
+    /*pop-up window*/
     .el-dialog__header,.el-dialog__title,.el-dialog__body{
         background-color: #F0E68C;
     }
