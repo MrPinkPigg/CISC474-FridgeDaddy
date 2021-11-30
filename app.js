@@ -12,15 +12,15 @@ admin.initializeApp({
 });
 
 router.get('/',function(req, res){
-  res.sendFile(path.join(__dirname+'/index.html'));
+  res.sendFile(path.join(__dirname+'/public/pages/index.html'));
 });
 
 router.get('/search',function(req, res){
-  res.sendFile(path.join(__dirname+'/recipe-results.html'));
+  res.sendFile(path.join(__dirname+'/public/pages/recipe-results.html'));
 });
 
 router.get('/recipe',function(req, res){
-  res.sendFile(path.join(__dirname+'/recipe.html'));
+  res.sendFile(path.join(__dirname+'/public/pages/recipe.html'));
 });
 
 app.get('/recipes', function(req, res) {
@@ -49,6 +49,8 @@ app.get('/tags', function(req, res) {
 });
 
 app.use('/public', express.static(path.join(__dirname, "public")));
+app.use('/favicon.ico', express.static('images/favicon.ico'));
+
 app.use('/', router);
 app.listen(process.env.port || 3000);
 
