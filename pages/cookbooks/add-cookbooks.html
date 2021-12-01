@@ -54,7 +54,7 @@
     </style>
 </head>
 
-<body>
+<body onload="populateRecipes()">
     <div class="header">
         <div class="header-left">
             <img src="/assets/daddy.png" class="logo" alt="The Fridge Daddy">
@@ -79,13 +79,8 @@
                 </div>
                 <label for="cookbook_recipes">Select Recipes</label>
                 <div class="cookbook-recipes-input">
-                    <select class="select" multiple="multiple">
-                        <option value="1">Recipe Placeholder 1</option>
-                        <option value="2">Recipe Placeholder 2</option>
-                        <option value="3">Recipe Placeholder 3</option>
-                        <option value="4">Recipe Placeholder 4</option>
-                        <option value="5">Recipe Placeholder 5</option>
-                        <option value="6">Recipe Placeholder 6</option>
+                    <select name="recipe-select" id="recipe-select" class="select" multiple multiselect-max-items="3">
+
                     </select>
                 </div>
                 <div class="cookbook-desc-input">
