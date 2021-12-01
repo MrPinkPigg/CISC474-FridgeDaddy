@@ -285,6 +285,89 @@ new Vue({
             ]
         
         }, {
+            "type": "Thai",
+            "name": "Spicy Thai Basil Chicken",
+            "grade": "3.9",
+            "picture": "../../images/thai.png",
+            "describe": "The sauce actually acts like a glaze as the chicken mixture cooks over high heat. The recipe works best if you chop or grind your own chicken and have all ingredients prepped before you start cooking.",
+            "materials": [
+                {
+                    "name": 'All',
+                    "text": `⅓ cup chicken broth and 1 tablespoon oyster sauce <br/>
+                    1 tablespoon soy sauce, or as needed<br/>
+                    2 teaspoons fish sauce<br/>
+                    1 teaspoon white sugar and 1 teaspoon brown sugar <br/>
+                    2 tablespoons vegetable oil<br/>
+                    1 pound skinless, boneless chicken thighs, coarsely chopped<br/>
+                    ¼ cup sliced shallots<br/>
+                    4 cloves garlic, minced<br/>
+                    2 tablespoons minced Thai chilies, Serrano, or other hot pepper<br/>
+                    1 cup very thinly sliced fresh basil leaves<br/>
+                    2 cups hot cooked rice<br/>
+                    
+                    `
+                },
+                
+            ],
+            "steps": [
+                {
+                    "name": '1',
+                    "text": 'Whisk chicken broth, oyster sauce, soy sauce, fish sauce, white sugar, and brown sugar together in a bowl until well blended.'
+                },
+                {
+                    "name": '2',
+                    "text": `Heat large skillet over high heat. Drizzle in oil. Add chicken and stir fry until it loses its raw color, 2 to 3 minutes. Stir in shallots, garlic, and sliced chilies. Continue cooking on high heat until some of the juices start to caramelize in the bottom of the pan, about 2 or 3 more minutes. Add about a tablespoon of the sauce mixture to the skillet; cook and stir until sauce begins to caramelize, about 1 minute.
+                    `
+                },
+                {
+                    "name": '3',
+                    "text": 'Pour in the rest of the sauce. Cook and stir until sauce has deglazed the bottom of the pan. Continue to cook until sauce glazes onto the meat, 1 or 2 more minutes. Remove from heat.'
+                },
+                {
+                    "name": '4',
+                    "text": 'Stir in basil. Cook and stir until basil is wilted, about 20 seconds. Serve with rice.'
+                }
+            ]
+        
+        }, {
+            "type": "Desserts",
+            "name": "Cheese Cake Cup",
+            "grade": "3.8",
+            "picture": "../../images/cake.png",
+            "describe": "Very easy recipe that can be made with kids. Top with chocolate chips or cherry pie filling, if you like.",
+            "materials": [
+                {
+                    "name": 'All',
+                    "text": `16 vanilla wafer cookies <br/>
+                    2 (8 ounce) packages cream cheese, softened <br/>
+                    ¾ cup white sugar <br/>
+                    2 eggs<br/>
+                    1 teaspoon vanilla extract<br/>
+                    `
+                },
+            ],
+            "steps": [
+                {
+                    "name": '1',
+                    "text": 'In a suitable bowl,mix in the flour, salt,and yeastPreheat oven to 350 degrees F (175 degrees C). Line muffin pans with cupcake papers.'
+                },
+                {
+                    "name": '2',
+                    "text": 'Place one wafer cookie in the bottom of each cupcake paper. In a medium bowl, cream together cream cheese and sugar.'
+                },
+                {
+                    "name": '3',
+                    "text": 'Beat in eggs and vanilla until smooth. Pour over wafers in cupcake papers.'
+                },
+                {
+                    "name": '4',
+                    "text": 'Bake in preheated oven 15 minutes, until golden and set.'
+                }
+            ]
+        
+
+        }, 
+        {
             "type": "Soup",
             "name": "Orleans Creole Gumbo",
             "grade": "3.9",
@@ -330,43 +413,6 @@ new Vue({
                 }
             ]
         
-        }, {
-            "type": "Desserts",
-            "name": "Cheese Cake Cup",
-            "grade": "3.8",
-            "picture": "../../images/cake.png",
-            "describe": "Very easy recipe that can be made with kids. Top with chocolate chips or cherry pie filling, if you like.",
-            "materials": [
-                {
-                    "name": 'All',
-                    "text": `16 vanilla wafer cookies <br/>
-                    2 (8 ounce) packages cream cheese, softened <br/>
-                    ¾ cup white sugar <br/>
-                    2 eggs<br/>
-                    1 teaspoon vanilla extract<br/>
-                    `
-                },
-            ],
-            "steps": [
-                {
-                    "name": '1',
-                    "text": 'In a suitable bowl,mix in the flour, salt,and yeastPreheat oven to 350 degrees F (175 degrees C). Line muffin pans with cupcake papers.'
-                },
-                {
-                    "name": '2',
-                    "text": 'Place one wafer cookie in the bottom of each cupcake paper. In a medium bowl, cream together cream cheese and sugar.'
-                },
-                {
-                    "name": '3',
-                    "text": 'Beat in eggs and vanilla until smooth. Pour over wafers in cupcake papers.'
-                },
-                {
-                    "name": '4',
-                    "text": 'Bake in preheated oven 15 minutes, until golden and set.'
-                }
-            ]
-        
-
         }, {
             "type": "Pasta",
             "name": "Lighter Chicken Fettuccine Alfredo",
@@ -705,7 +751,7 @@ new Vue({
                 },
                 {
                     "name": '4',
-                    "text": ''
+                    "text": 'Ladle soup into oven safe serving bowls and place one slice of bread on top of each (bread may be broken into pieces if you prefer). Layer each slice of bread with a slice of provolone, 1/2 slice diced Swiss and 1 tablespoon Parmesan cheese. Place bowls on cookie sheet and broil in the preheated oven until cheese bubbles and browns slightly.'
                 }
             ]
         
