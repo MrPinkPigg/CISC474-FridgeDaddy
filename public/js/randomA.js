@@ -783,7 +783,7 @@ new Vue({
         this.showInfo = true;
         this.showPrint = false;
         this.showList = false;
-        this.itemInfo = item;
+        //this.itemInfo = item;
     },
     showInfoBtn(item) {
 

@@ -5,81 +5,86 @@
     <meta name="referrer" content="no-referrer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../css/public.css">
+    <!--<link rel="stylesheet" href="../../css/public.css">-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- import Elementui CSS -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <link rel="stylesheet" type="text/css" href="../../css/radomA.css">
-    <link rel="stylesheet" type="text/css" href="../../css/new.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/radomA.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/new.css">
     <title>Document</title>
 </head>
-<body>
-    <body class="bg-light">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
-            <div class="container-fluid">
-              <a class="navbar-brand text-white" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-egg-fill" viewBox="0 0 16 16">
-                    <path d="M14 10a6 6 0 0 1-12 0C2 5.686 5 0 8 0s6 5.686 6 10z"/>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                    class="bi bi-egg-fill" viewBox="0 0 16 16">
+                    <path d="M14 10a6 6 0 0 1-12 0C2 5.686 5 0 8 0s6 5.686 6 10z" />
                 </svg>
                 Fridge Daddy
             </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
+            </button>
+            <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link text-white" aria-current="page" href="./index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white" href="./RandomChina.html">Browse</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white">My Cookbooks</a>
-                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../pages/RandomChina.html">Browse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white">My Cookbooks</a>
+                    </li>
                 </ul>
                 <form class="d-flex">
-                  <button class="btn btn-outline-light" type="submit">Log In</button>
+                    <button class="btn btn-outline-light" type="submit">Log In</button>
                 </form>
-              </div>
-            </div>
-          </nav>
-
-    </div>
-</div>
-<div id="main">
-    <!-- list -->
-    <div v-for="item in list" v-if = "showList">
-        <div class="panel">
-            <div class="panel_img">
-                <el-image class="img" :src="item.picture"></el-image>
-            </div>
-            <div class="panel_main">
-                <div class="panel_main_top">
-                    <el-row>
-                        <el-col :span="12">
-                            <div class="panel_main_info">
-                                <div class="type"><el-tag type="warning" size="medium">{{item.type}}</el-tag></div>
-                                <div  class="name">{{item.name}}</div>
-
-                            </div>
-                        </el-col>
-                        <el-col :span="12">
-                            <div class="panel_main_price">
-                                <!--  <div class="price">$ {{item.price}}</div> -->
-                                <div class="grade">
-                                    <el-rate v-model="item.grade" disabled show-score text-color="#ff9900" :score-template="item.grade"></el-rate>
-                                </div>
-                                <div class="btn_info"><el-button type="primary" size="mini" round @click="showInfoBtn(item)">View Details</el-button></div>
-                            </div>
-                        </el-col>
-                    </el-row>
-                </div>
-                <div class="panel_main_describe" >{{item.describe}}</div>
             </div>
         </div>
-    </div>
+    </nav>
+    <div id="main">
+        <!-- list -->
+        <div v-for="item in list" v-if="showList">
+            <div class="panel">
+                <div class="panel_img">
+                    <el-image class="img" :src="item.picture"></el-image>
+                </div>
+                <div class="panel_main">
+                    <div class="panel_main_top">
+                        <el-row>
+                            <el-col :span="12">
+                                <div class="panel_main_info">
+                                    <div class="type">
+                                        <el-tag type="warning" size="medium">{{item.type}}</el-tag>
+                                    </div>
+                                    <div class="name">{{item.name}}</div>
+
+                                </div>
+                            </el-col>
+                            <el-col :span="12">
+                                <div class="panel_main_price">
+                                    <div class="grade">
+                                        <el-rate v-model="item.grade" disabled show-score text-color="#ff9900"
+                                            :score-template="item.grade+''"></el-rate>
+                                    </div>
+                                    <div class="btn_info">
+                                        <el-button type="primary" size="mini" round @click="showInfoBtn(item)">View
+                                            Details</el-button>
+                                    </div>
+                                </div>
+                            </el-col>
+                        </el-row>
+                    </div>
+                    <div class="panel_main_describe">{{item.describe}}</div>
+                </div>
+            </div>
+        </div>
+
 
     <!-- details -->
     <el-button v-if="showInfo">
@@ -109,19 +114,25 @@
             </div>
         </div>
     </el-col> -->
-            <el-col :span="24">
-                <div class="details_right">
-                    <el-row>
-                        <el-col :span="24">
-                            <div class="details_right_pic">
-                                <el-image class="img" :src="itemInfo.picture"></el-image>
-                            </div>
-                        </el-col>
-                    </el-row>
-                </div>
-            </el-col>
-        </el-row>
-        <div class="details_menu">
+       <el-col>
+	       <div class="details_right">
+							<el-row :gutter="20">
+								<el-col :span="18">
+									<div class="details_right_pic">
+										<el-image class="img" :src="itemInfo.picture"></el-image>
+									</div>
+								</el-col>
+								<el-col :span="6">
+									<div class="detail-name">{{itemInfo.name}}</div>
+									<p class="detail-text">{{itemInfo.describe}}</p>
+								</el-col>
+							</el-row>
+						</div>
+					</el-col>
+				</el-row>
+				<el-row>
+					<el-col :span="18">
+                        <div class="details_menu">
             <!-- <div class="menu_btn">
         <div class="icon">
             <el-i class="el-icon-notebook-2" style="color: red;margin-top: 10px;"></el-i>
@@ -141,6 +152,9 @@
                 <div>Print</div>
             </div>
         </div>
+    </el-col>
+</el-row>
+
         <div v-if="itemInfo.materials&&itemInfo.materials.length>0" class="introduce">
             <h2>Ingredients</h2>
             <div class="ings">
@@ -244,7 +258,8 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <!-- import JavaScript -->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-<script type="text/javascript" src="public/js/randomA.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../public/js/randomA.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>
