@@ -1,3 +1,14 @@
+$.ajax({
+    type: 'GET',
+    url: 'http://localhost:3000/recipes',
+    success: function(res) {
+        console.log(res);
+    },
+    error: function(xhr, status, err) {
+       console.log(xhr.responseText);
+    }
+ });
+
 new Vue({
     el: '#main',
     data: function () {

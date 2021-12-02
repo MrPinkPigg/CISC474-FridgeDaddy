@@ -5,6 +5,7 @@ window.onload = function() {
         type: 'GET',
         url: 'http://localhost:3000/recipes',
         success: function(res) {
+            console.log(res);
             makeCards(res);
         },
         error: function(xhr, status, err) {
@@ -15,6 +16,7 @@ window.onload = function() {
 
 function makeCards(obj) {
     var cards = []
+    const cardMap = new Map();
 
     for(var i = 0; i < obj.length; i++) {
         if(obj[i].tag.some(r=> ing_list.indexOf(r) >= 0)) {

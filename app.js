@@ -23,6 +23,11 @@ router.get('/recipe',function(req, res){
   res.sendFile(path.join(__dirname+'/recipe.html'));
 });
 
+//testing
+router.get('/test',function(req, res){
+  res.sendFile(path.join(__dirname+'/public/pages/RandomChina.html'));
+});
+
 app.get('/recipes', function(req, res) {
   var ref = admin.database().ref('recipes/recipe/');
   ref.on("value", function(snapshot) {
