@@ -1,3 +1,4 @@
+@media print { body{-webkit-print-color-adjust:exact;} }
 .details_menu {
 	overflow: hidden;
 	margin: 20px 0;
