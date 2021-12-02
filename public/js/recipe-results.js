@@ -5,7 +5,6 @@ window.onload = function() {
         type: 'GET',
         url: 'http://localhost:3000/recipes',
         success: function(res) {
-            console.log(res);
             makeCards(res);
         },
         error: function(xhr, status, err) {
@@ -14,21 +13,34 @@ window.onload = function() {
      });
  }
 
+/*
+    Makes the cards for the results page.
+    Iterates through the ingredients list sotred in localstorage, and compares to the res
+    from the server. Creates a map to track if the recipe has the ingredient from localstorage.
+    Sort this map, convert to array, then  make cards
+*/
+
 function makeCards(obj) {
     var cards = []
     const cardMap = new Map();
-
-    for(var i = 0; i < obj.length; i++) {
-        if(obj[i].tag.some(r=> ing_list.indexOf(r) >= 0)) {
-            if(!cards.includes(obj[i].name)) {
-                cards.push(obj[i].name);
-            } else {
-                cards.splice(cards.indexOf(obj[i].name), 1);
-                cards.unshift(obj[i].name);
+    
+    for(var j = 0; j < ing_list.length; j++) {
+        for(var i = 0; i < obj.length; i++) {
+            if(obj[i].tag.includes(ing_list[j])) {
+                if(!cardMap.has(obj[i].name)) {
+                    cardMap.set(obj[i].name, 1);
+                } else {
+                    cardMap.set(obj[i].name, cardMap.get(obj[i].name) + 1);
+                }
             }
         }
     }
-    console.log(cards);
+
+    const mapSort = new Map([...cardMap.entries()].sort((a, b) => b[1] - a[1]));
+    for (let key of mapSort.keys()) {
+        cards.push(key);
+    }
+
     for(var i = 0; i < cards.length; i++) {
         for(var j = 0; j < obj.length; j++) {
             if(obj[j].name == cards[i]) {
@@ -38,4 +50,3 @@ function makeCards(obj) {
         }
     }
 }
-
