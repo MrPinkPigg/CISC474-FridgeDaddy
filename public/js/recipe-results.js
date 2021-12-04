@@ -44,9 +44,16 @@ function makeCards(obj) {
     for(var i = 0; i < cards.length; i++) {
         for(var j = 0; j < obj.length; j++) {
             if(obj[j].name == cards[i]) {
-                document.getElementById('list').innerHTML += '<div class="card mb-3" style="width: 18rem;"><img src="' + obj[j].image + '" class="card-img-top" alt="..."><div class="card-body">' +
+                document.getElementById('list').innerHTML += '<div class="card mb-3" style="width: 18rem;" id="'+obj[j].name+'"><img src="' + obj[j].image + '" class="card-img-top" alt="..."><div class="card-body">' +
                 '<h5 class="card-title"><a href="/recipe" class="stretched-link link-dark" style="text-decoration: none;">' + obj[j].name + '</a></h5><p class="card-text">' + obj[j].description + '</p></div></div>';
             }
         }
+    }
+
+    const element = document.querySelectorAll(".card");
+    for (var i = 0; i < element.length; i++) {
+        element[i].addEventListener('click', function(event) {
+            localStorage.setItem("recipe_name", JSON.stringify(this.id));
+        });
     }
 }
