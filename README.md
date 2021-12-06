@@ -23,6 +23,8 @@ Web application where users can search recipes based on the ingredients they hav
 
 2.The download page in randompage references ：
 
+Eros Fratini - eros@recoding.it
+
 http://plugins.jquery.com/project/jPrintArea
 
 http://www.opensource.org/licenses/mit-license.php
