@@ -17,3 +17,14 @@ Web application where users can search recipes based on the ingredients they hav
 4. Run using `node app.js` By default, the port is `3000`
 
 
+### References 
+
+1.All recipes referenced by Randompage are https://www.allrecipes.com/ and Open Source Cookbook V2.0
+
+2.The download page in randompage references ：
+
+http://plugins.jquery.com/project/jPrintArea
+
+http://www.opensource.org/licenses/mit-license.php
+
+
