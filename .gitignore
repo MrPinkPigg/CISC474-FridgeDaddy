@@ -1,4 +1,3 @@
-firebaseInit.js
-package-lock.json
-package.json
+/*.json
+/firebaseInit.js
 node_modules
