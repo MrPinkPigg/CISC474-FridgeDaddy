@@ -1,7 +1,3 @@
-//IMPORTANT
-//ADD TO HEAD BEFORE ANY OTHER <script> TAGS:
-// <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase.js"></script>
-
 // old imports (maybe not needed?)
 //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
 //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js";

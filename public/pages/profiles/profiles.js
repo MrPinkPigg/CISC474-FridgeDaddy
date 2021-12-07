@@ -5,8 +5,8 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
-    var uid = user.uid;
-    //window.location.href = "signout.html";
+    uid = user.uid;
+    //window.location.href = "signOut.html";
     // ...
   } else {
     // User is signed out
@@ -14,10 +14,11 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 
+
 function signOutBtn() {
   firebase.auth().signOut().then(() => {
-    window.alert("Signed out " + user.email);
-  }).catch((error) => {});
+    //window.alert("Signed out " + user.email);
+  }).catch((error) => { });
 }
 
 function signUp() {
@@ -28,7 +29,7 @@ function signUp() {
     .then((userCredential) => {
       // Signed in 
       user = firebase.auth().currentUser;
-      window.alert("Account created: " + user.email);
+      //window.alert("Account created: " + user.email);
       // ...
     })
     .catch((error) => {
@@ -53,7 +54,7 @@ function signIn() {
     .then((userCredential) => {
       // Signed in 
       user = firebase.auth().currentUser;
-      window.alert("Signed In: " + user.email);
+      //window.alert("Signed In: " + user.email);
       // ...
     })
     .catch((error) => {
@@ -62,5 +63,5 @@ function signIn() {
 
       window.alert("Error : " + errorMessage);
     });
-    
+
 }
