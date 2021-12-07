@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase.js"></script>
   <link rel="stylesheet" href="../../styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
 <body id="profiles">
   <div class="header">
     <div class="header-left">
-      <img src="../../favicon.ico" class="logo" alt="The Fridge Daddy">
+      <img src="../../assets/daddy.png" class="logo" alt="The Fridge Daddy">
     </div>
     <h1 class="logo-title">Fridge Daddy</h1>
     <div class="header-right">
@@ -24,17 +25,24 @@
   </div>
   <div class="loginPage">
     <div id="signupDiv" class="form">
-      <form class="registerForm">
-        <!--<input type="text" placeholder="name" />-->
-        <input type="text" placeholder="email address" />
-        <input type="password" placeholder="password" />
-        <button onclick="signUp()">create</button>
+      <form class="registerForm" id="registerForm">
+        <!--<input type="text" placeholder="name" id="nameField"/>-->
+        <input type="text" placeholder="email address" id="emailField" />
+        <input type="password" placeholder="password" id="passwordField" />
+        <button onclick="signUp()" type="submit">create</button>
         <p class="message">Already registered? <a href="signIn.html">Sign In</a></p>
       </form>
     </div>
   </div>
 
-  <script src="/firebaseInit.js" type="module"></script>
+  <script src="../../firebaseInit.js"></script>
   <script src="profiles.js"></script>
+  <script>
+    var form = document.getElementById("registerForm");
+    function handleForm(event) { event.preventDefault(); }
+    form.addEventListener('submit', handleForm);
+  </script>
 
 </body>
+
+</html>
