@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookbooks</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body onload="populateCookbooks()">
+
+    <div class="header">
+        <div class="header-left">
+            <img src="/assets/daddy.png" class="logo" alt="The Fridge Daddy">
+        </div>
+        <h1 class="logo-title">Fridge Daddy</h1>
+        <div class="header-right">
+            <a href="../../index.html">Home</a>
+            <a class="active" href="cookbooks.html">Cookbook</a>
+            <a href="Random.html">Recommended</a>
+            <a href="profiles/signIn.html">Profile</a>
+        </div>
+    </div>
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">My Cookbooks</h1>
+            <p class="lead text-muted">Welcome to your cookbook page. Here you can customize, add, and delete your cookbooks.</p>
+            <p>
+                <a href="../cookbooks/add-cookbooks.html" class="btn add-button my-2">Add cookbooks</a>
+            </p>
+        </div>
+    </section>
+
+    <div>
+        <div class="container">
+            <div class="row" id="cookbooks-container">
+            </div>
+        </div>
+    </div>
+
+    <script src="../../firebaseInit.js"></script>
+    <script src="../cookbooks/cookbooks.js"></script>
+
+</body>
+
+</html>
