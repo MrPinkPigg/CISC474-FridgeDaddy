@@ -49,3 +49,7 @@ function deletes() {
     })
 }
 
+function signInBtn(){
+   console.log("test");
+   window.location.href = "signIn";
+}
