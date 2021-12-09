@@ -31,7 +31,7 @@ $.ajax({
 					"type": "Meats",
 					"name": "Pizza",
 					"grade": 3.1,
-					"picture": "../../images/pizza.png",
+					"picture": "../../public/images/pizza.png",
 					"describe": "Perreroni pizza by werewolf pizza",
 					"materials": [{
 							"name": 'flour',
@@ -79,7 +79,7 @@ $.ajax({
 					"type": "Meats",
 					"name": "Hot Chicken Fried Steak Sando",
 					"grade": 3.5,
-					"picture": "../../images/hotChicken.png",
+					"picture": "../../public/images/hotChicken.png",
 					"describe": "Hot Chicken Fried Steak Sando(MEGHAN ROBBINS CHEF-SUPERPOINT",
 					"materials": [{
 							"name": 'For The Dredge',
@@ -132,7 +132,7 @@ $.ajax({
 					"type": "Veg",
 					"name": "Graham's Pozole Verde",
 					"grade": 3.1,
-					"picture": "../../images/verde.png",
+					"picture": "../../public/images/verde.png",
 					"describe": "GRAHAM PRATT CHEF/OWNER - FORMERLY THE GABARDINECHEF - WOODHOUSE BREW PUB ",
 					"materials": [{
 							"name": 'Part 1',
@@ -200,7 +200,7 @@ $.ajax({
 					"type": "Seafood",
 					"name": "Albacore Tuna ",
 					"grade": 3.1,
-					"picture": "../../images/tuna.png",
+					"picture": "../../public/images/tuna.png",
 					"describe": "ALBACORE TUNA WITH BOK CHOY, TOFU, COCONUT BROTH AND ANISE ASH -BRENT MAXWELL CHEF - LA SOCIÉTÉ",
 					"materials": [{
 							"name": 'Coconut Broth',
@@ -247,7 +247,7 @@ $.ajax({
 					"type": "ChinaType",
 					"name": "Mui Chuy Kow Yuk",
 					"grade": 2.7,
-					"picture": "../../images/china.png",
+					"picture": "../../public/images/china.png",
 					"describe": "This is a Chinese recipe",
 					"materials": [{
 							"name": 'All',
@@ -288,7 +288,7 @@ $.ajax({
 					"type": "Thai",
 					"name": "Spicy Thai Basil Chicken",
 					"grade": 3.9,
-					"picture": "../../images/thai.png",
+					"picture": "../../public/images/thai.png",
 					"describe": "The sauce actually acts like a glaze as the chicken mixture cooks over high heat. The recipe works best if you chop or grind your own chicken and have all ingredients prepped before you start cooking.",
 					"materials": [{
 							"name": 'All',
@@ -331,7 +331,7 @@ $.ajax({
 					"type": "Desserts",
 					"name": "Cheese Cake Cup",
 					"grade": 3.8,
-					"picture": "../../images/cake.png",
+					"picture": "../../public/images/cake.png",
 					"describe": "Very easy recipe that can be made with kids. Top with chocolate chips or cherry pie filling, if you like.",
 					"materials": [{
 						"name": 'All',
@@ -366,7 +366,7 @@ $.ajax({
 					"type": "Soup",
 					"name": "Orleans Creole Gumbo",
 					"grade": 3.9,
-					"picture": "../../images/soup.png",
+					"picture": "../../public/images/soup.png",
 					"describe": "Serve over hot cooked rice. The gumbo can be frozen or refrigerated and many people like it better the next day. Bon appetit",
 					"materials": [{
 							"name": 'All',
@@ -410,7 +410,7 @@ $.ajax({
 					"type": "Pasta",
 					"name": "Lighter Chicken Fettuccine Alfredo",
 					"grade": 3.2,
-					"picture": "../../images/pasta.png",
+					"picture": "../../public/images/pasta.png",
 					"describe": "This version of chicken fettuccine alfredo is lightened by substituting some of the heavy cream with chicken broth.",
 					"materials": [{
 							"name": 'All',
@@ -460,7 +460,7 @@ $.ajax({
 					"type": "Korean ",
 					"name": "Korean Chicken Wings",
 					"grade": 3.5,
-					"picture": "../../images/wing.png",
+					"picture": "../../public/images/wing.png",
 					"describe": "These Korean-style air-fried wings are crispy, sticky and spicy. Cooked in an air fryer they are ready in less than 30 minutes. They are perfect as an appetizer or add some rice and veggies on the side and you have a balanced meal.",
 					"materials": [{
 							"name": 'Sauce',
@@ -515,7 +515,7 @@ $.ajax({
 					"type": "Pasta",
 					"name": "Sicilian Spaghetti",
 					"grade": 3.5,
-					"picture": "../../images/noodle.png",
+					"picture": "../../public/images/noodle.png",
 					"describe": "If you love anchovies and pasta, this recipe is for you. It's quick, easy and very tasty. Serve with crusty Italian bread, if desired.",
 					"materials": [{
 							"name": 'All',
@@ -552,7 +552,7 @@ $.ajax({
 					"type": "Meats",
 					"name": "Sausage-Stuffed Cherry Pepper Poppers",
 					"grade": 3.5,
-					"picture": "../../images/ss.png",
+					"picture": "../../public/images/ss.png",
 					"describe": "These things are the best beer food ever. They're almost too easy to make.",
 					"materials": [{
 							"name": 'All',
@@ -587,7 +587,7 @@ $.ajax({
 					"type": "Meat",
 					"name": "Red Curry Flank Steak",
 					"grade": 3.5,
-					"picture": "../../images/steak.png",
+					"picture": "../../public/images/steak.png",
 					"describe": "basically chunks of beef stew meat cooked slowly in a spicy, aromatic red curry sauce. ",
 					"materials": [{
 							"name": 'All',
@@ -624,7 +624,7 @@ $.ajax({
 					"type": "Seafood",
 					"name": "Tilapia with Dill Sauce",
 					"grade": 3.5,
-					"picture": "../../images/sea.png",
+					"picture": "../../public/images/sea.png",
 					"describe": "Baked tilapia seasoned with Cajun and citrus served with a creamy sauce of fresh dill and lemon.",
 					"materials": [{
 							"name": 'All',
@@ -662,7 +662,7 @@ $.ajax({
 					"type": "Drink",
 					"name": "Whiskey Drink",
 					"grade": 3.5,
-					"picture": "../../images/drink.png",
+					"picture": "../../public/images/drink.png",
 					"describe": "One of the great classic bourbon cocktails, the Old Fashioned was invented in Louisville, KY. Try bourbon, rye, or a blended whiskey in this cocktail. You can also sub one sugar cube for the simple syrup.",
 					"materials": [{
 							"name": 'All',
@@ -696,7 +696,7 @@ $.ajax({
 					"type": "Soup",
 					"name": "French Onion Soup",
 					"grade": 3.5,
-					"picture": "../../images/s.png",
+					"picture": "../../public/images/s.png",
 					"describe": "We have been trying French onion soup in restaurants for years and my family and friends agree none can compare to my recipe for taste and simplicity of preparation.",
 					"materials": [{
 							"name": 'All',
