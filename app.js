@@ -4,7 +4,11 @@ const path = require('path');
 const router = express.Router();
 var admin = require("firebase-admin");
 //update to local path
+<<<<<<< HEAD
 var serviceAccount = require("/Users/aidanchao/fridgedaddy-ud21-firebase-adminsdk-46k31-8ea7205be6.json");
+=======
+var serviceAccount = require("D:/cisc474/group/fridgedaddy-ud21-firebase-adminsdk-46k31-d8e3282848.json");
+>>>>>>> bd29f94a05ed806c1779497cca7b0fca9ecfdbb2
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -42,9 +46,13 @@ router.get('/signIn',function(req, res){
   res.sendFile(path.join(__dirname+'/public/pages/profiles/signIn.html'));
 });
 
+router.get('/signUp',function(req, res){
+  res.sendFile(path.join(__dirname+'/public/pages/profiles/signUp.html'));
+});
+
 //testing
-router.get('/test', function (req, res) {
-  res.sendFile(path.join(__dirname + '/public/pages/RandomChina.html'));
+router.get('/Random', function (req, res) {
+  res.sendFile(path.join(__dirname + '/public/pages/Random.html'));
 });
 
 app.get('/recipes', function (req, res) {
