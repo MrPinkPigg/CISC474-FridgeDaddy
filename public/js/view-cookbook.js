@@ -28,52 +28,20 @@ function generate(cookbookObj, recipeObj) {
                 console.log(cookbookObj[key].Cookbook.Recipes[i]);
                 for (var i = 0; i < recipeObj.length; i++) {
                     if (cookbookObj[key].Cookbook.Recipes[i] == recipeObj[i].name) {
-                        document.getElementById('title').innerHTML = recipeObj[i].name;
-                        document.getElementById('description').innerHTML = recipeObj[i].description;
-                        document.getElementById('image').innerHTML = '<img src="' + recipeObj[i].image + '" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" width="700" height="500"></img>';
-
-                        for (var j = 0; j < recipeObj[i].step.length; j++) {
-                            document.getElementById('directions').innerHTML += '<p>' + recipeObj[i].step[j].description + '</p>'
-                        }
-                        if (recipeObj[i].hasOwnProperty('ingredient')) {
-                            for (var k = 0; k < obj[i].ingredient.length; k++) {
-                                document.getElementById('ingredients').innerHTML += '<p id="' + k + '"></p>';
-                                if (recipeObj[i].ingredient[k].hasOwnProperty('amount')) {
-                                    document.getElementById(k.toString()).innerHTML += recipeObj[i].ingredient[k].amount + ' ';
-                                } if (recipeObj[i].ingredient[k].hasOwnProperty('unit')) {
-                                    document.getElementById(k.toString()).innerHTML += recipeObj[i].ingredient[k].unit + ' ';
-                                } if (recipeObj[i].ingredient[k].hasOwnProperty('name')) {
-                                    document.getElementById(k.toString()).innerHTML += recipeObj[i].ingredient[k].name + ' ';
-                                } if (recipeObj[i].ingredient[k].hasOwnProperty('preparation')) {
-                                    document.getElementById(k.toString()).innerHTML += recipeObj[i].ingredient[k].preparation + ' ';
-                                }
-                            }
-                        } else if (recipeObj[i].hasOwnProperty('ingredientGroup')) {
-                            var adjust = 0;
-                            var total = 0;
-                            for (var x = 0; x < recipeObj[i].ingredientGroup.length; x++) {
-                                document.getElementById('ingredients').innerHTML += '<h5>' + obj[i].ingredientGroup[x].name + '</h5>';
-                                for (var y = 0; y < recipeObj[i].ingredientGroup[x].ingredient.length; y++) {
-                                    total = y + adjust;
-                                    document.getElementById('ingredients').innerHTML += '<p id="' + total + '"></p>';
-                                    if (recipeObj[i].ingredientGroup[x].ingredient[y].hasOwnProperty('amount')) {
-                                        document.getElementById(total.toString()).innerHTML += recipeObj[i].ingredientGroup[x].ingredient[y].amount + ' ';
-                                    } if (recipeObj[i].ingredientGroup[x].ingredient[y].hasOwnProperty('unit')) {
-                                        document.getElementById(total.toString()).innerHTML += recipeObj[i].ingredientGroup[x].ingredient[y].unit + ' ';
-                                    } if (recipeObj[i].ingredientGroup[x].ingredient[y].hasOwnProperty('name')) {
-                                        document.getElementById(total.toString()).innerHTML += recipeObj[i].ingredientGroup[x].ingredient[y].name + ' ';
-                                    } if (recipeObj[i].ingredientGroup[x].ingredient[y].hasOwnProperty('preparation')) {
-                                        document.getElementById(total.toString()).innerHTML += recipeObj[i].ingredientGroup[x].ingredient[y].preparation + ' ';
-                                    }
-                                    adjust++;
-                                }
-                            }
-                        }
-                        break;
+                        console.log(recipeObj[i].name)
+                        document.getElementById('list').innerHTML += '<div class="card mb-3" style="width: 18rem;" id="'+recipeObj[i].name+'"><img src="' + recipeObj[i].image + '" class="card-img-top" alt="..."><div class="card-body">' +
+                        '<h5 class="card-title"><a href="/recipe" class="stretched-link link-dark" style="text-decoration: none;">' + recipeObj[i].name + '</a></h5><p class="card-text">' + recipeObj[i].description + '</p></div></div>';
                     }
                 }
             }
         }
+    }
+
+    const element = document.querySelectorAll(".card");
+    for (var i = 0; i < element.length; i++) {
+        element[i].addEventListener('click', function(event) {
+            localStorage.setItem("recipe_name", JSON.stringify(this.id));
+        });
     }
 
 }
