@@ -27,8 +27,9 @@ function generate(cookbookObj, recipeObj) {
             for (var i = 0; i < cookbookObj[key].Cookbook.Recipes.length; i++) {
                 console.log(cookbookObj[key].Cookbook.Recipes[i]);
                 for (var i = 0; i < recipeObj.length; i++) {
+                    console.log(recipeObj.length);
                     if (cookbookObj[key].Cookbook.Recipes[i] == recipeObj[i].name) {
-                        console.log(recipeObj[i].name)
+                        console.log(recipeObj[i].name);
                         document.getElementById('list').innerHTML += '<div class="card mb-3" style="width: 18rem;" id="'+recipeObj[i].name+'"><img src="' + recipeObj[i].image + '" class="card-img-top" alt="..."><div class="card-body">' +
                         '<h5 class="card-title"><a href="/recipe" class="stretched-link link-dark" style="text-decoration: none;">' + recipeObj[i].name + '</a></h5><p class="card-text">' + recipeObj[i].description + '</p></div></div>';
                     }
