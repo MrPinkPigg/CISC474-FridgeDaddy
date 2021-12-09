@@ -4,7 +4,7 @@ const path = require('path');
 const router = express.Router();
 var admin = require("firebase-admin");
 //update to local path
-var serviceAccount = require("");
+var serviceAccount = require("/Users/aidanchao/fridgedaddy-ud21-firebase-adminsdk-46k31-8ea7205be6.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -32,6 +32,10 @@ router.get('/cookbook', function (req, res) {
 
 router.get('/addcookbook', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/pages/add-cookbooks.html'));
+});
+
+router.get('/viewcookbook', function (req, res) {
+  res.sendFile(path.join(__dirname + '/public/pages/view-cookbook.html'));
 });
 
 router.get('/signIn',function(req, res){
@@ -68,6 +72,16 @@ app.get('/tags', function (req, res) {
   });
 });
 
+app.get('/cookbookList', function (req, res) {
+  var ref = admin.database().ref('mycookbooks/');
+  ref.on("value", function (snapshot) {
+    console.log(snapshot.val());
+    res.send(snapshot.val());
+  }, function (error) {
+    console.log("Error: " + error.code);
+  });
+});
+
 app.post('/cookbooks', function (req, res) {
   var ref = admin.database().ref('mycookbooks/')
   console.log(req.body);
@@ -78,8 +92,9 @@ app.post('/cookbooks', function (req, res) {
 
   var recipes = req.body.slice(2);
 
-  ref.set ({
-    [cookbookName]: {
+  ref.push ({
+    Cookbook: {
+      CookbookName: cookbookName,
       CookbookDesc: cookbookDesc,
       Recipes: recipes
     }
