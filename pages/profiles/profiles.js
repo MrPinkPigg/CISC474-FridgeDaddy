@@ -17,7 +17,7 @@ firebase.auth().onAuthStateChanged((user) => {
 function signOutBtn() {
   firebase.auth().signOut().then(() => {
     window.alert("Signed out " + user.email);
-  }).catch((error) => {});
+  }).catch((error) => { window.alert("Error: " + error.message); });
 }
 
 function signUp() {
