@@ -1,14 +1,13 @@
-$.ajax({
-    type: 'GET',
-    url: 'http://localhost:3000/recipes',
-    success: function (res) {
-        populateRecipes(res);
-        console.log("success");
-    },
-    error: function (xhr, status, err) {
-        console.log(xhr.responseText);
-    }
-});
+    $.ajax({
+        type: 'GET',
+        url: 'http://localhost:3000/recipes',
+        success: function (res) {
+            populateRecipes(res);
+        },
+        error: function (xhr, status, err) {
+            console.log(xhr.responseText);
+        }
+    });
 
 function addCookbook() {
     var cookbookName = document.getElementById("cookbook_name").value;
@@ -23,7 +22,7 @@ function addCookbook() {
             selected.push(option.value);
         }
     }
-
+    
     $.ajax({
         type: 'POST',
         url: 'http://localhost:3000/cookbooks',
@@ -38,7 +37,6 @@ function addCookbook() {
         }
     });
 
-    console.log(selected);
 }
 
 function populateRecipes(recipes) {

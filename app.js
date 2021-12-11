@@ -4,11 +4,7 @@ const path = require('path');
 const router = express.Router();
 var admin = require("firebase-admin");
 //update to local path
-<<<<<<< HEAD
-var serviceAccount = require("/Users/aidanchao/fridgedaddy-ud21-firebase-adminsdk-46k31-8ea7205be6.json");
-=======
-var serviceAccount = require("D:/cisc474/group/fridgedaddy-ud21-firebase-adminsdk-46k31-d8e3282848.json");
->>>>>>> bd29f94a05ed806c1779497cca7b0fca9ecfdbb2
+var serviceAccount = require("C:/Users/Matthew/Desktop/UDine/CISC474-UDine/fridgedaddy-ud21-firebase-adminsdk-46k31-eeba761a04.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -58,7 +54,7 @@ router.get('/Random', function (req, res) {
 app.get('/recipes', function (req, res) {
   var ref = admin.database().ref('recipes/recipe/');
   ref.on("value", function (snapshot) {
-    res.send(snapshot.val());
+    return res.send(snapshot.val());
   }, function (error) {
     console.log("Error: " + error.code);
   });
@@ -74,17 +70,21 @@ app.get('/tags', function (req, res) {
           dropdown.push(snapshot.val()[i].tag[j]);
         }
       }
-    } res.send(dropdown);
+    } return res.send(dropdown);
   }, function (error) {
     console.log("Error: " + error.code);
   });
 });
 
 app.get('/cookbookList', function (req, res) {
+  console.log("entering cookbook list)");
   var ref = admin.database().ref('mycookbooks/');
   ref.on("value", function (snapshot) {
-    console.log(snapshot.val());
-    res.send(snapshot.val());
+    try {
+      return res.send(snapshot.val());
+    } catch {
+      console.log("Headers already sent")
+    }
   }, function (error) {
     console.log("Error: " + error.code);
   });
@@ -92,11 +92,8 @@ app.get('/cookbookList', function (req, res) {
 
 app.post('/cookbooks', function (req, res) {
   var ref = admin.database().ref('mycookbooks/')
-  console.log(req.body);
   var cookbookName = req.body[0];
   var cookbookDesc = req.body[1];
-
-  console.log(cookbookName);
 
   var recipes = req.body.slice(2);
 
@@ -107,7 +104,8 @@ app.post('/cookbooks', function (req, res) {
       Recipes: recipes
     }
   });
-  res.send('POST request to the homepage')
+
+  return res.send("success");
 })
 
 app.use('/public', express.static(path.join(__dirname, "public")));
