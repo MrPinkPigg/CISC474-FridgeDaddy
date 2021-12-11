@@ -17,23 +17,27 @@ firebase.auth().onAuthStateChanged((user) => {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
     var uid = user.uid;
-    //console.log("signed in");
-    //window.location.href = "/";
+    console.log("signed in");
+    //console.log(user.email);
+    //window.location.href = "profile";
     // ...
   } else {
     // User is signed out
-    //console.log("signed out");
+    console.log("signed out");
     //window.location.href = "signIn";
   }
 });
 
 function currUser() {
-  console.log(user.email);
+  console.log(firebase.auth().currentUser.email);
 }
 
 function signOutBtn() {
+  var tempUser = firebase.auth().currentUser.email;
+
   firebase.auth().signOut().then(() => {
-    window.alert("Signed out " + user.email);
+    window.alert("Signed out " + tempUser);
+    window.location.href = "/";
   }).catch((error) => {
     window.alert("Error : " + error.message);
   });
@@ -42,13 +46,15 @@ function signOutBtn() {
 function signUp() {
   var userEmail = document.getElementById("emailField").value;
   var userPassword = document.getElementById("passwordField").value;
+  var passConfirm = document.getElementById("passConfirm").value;
 
+  if (userPassword == passConfirm) {
   auth.createUserWithEmailAndPassword(userEmail, userPassword)
     .then((userCredential) => {
       // Signed in 
-      user = firebase.auth().currentUser;
+      user = userCredential.user;
       window.alert("Account created: " + user.email);
-      // ...
+      window.location.href = "profile";
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -56,6 +62,8 @@ function signUp() {
 
       window.alert("Error : " + errorMessage);
     });
+  }
+  else { window.alert("Passwords do not match"); }
 
 }
 
@@ -68,11 +76,12 @@ function signIn() {
   var userEmail = document.getElementById("emailField").value;
   var userPassword = document.getElementById("passwordField").value;
 
-  auth.signInWithEmailAndPassword(userEmail, userPassword)
+  firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
     .then((userCredential) => {
       // Signed in 
-      user = firebase.auth().currentUser;
+      user = userCredential.user;
       window.alert("Signed In: " + user.email);
+      window.location.href = "profile";
       // ...
     })
     .catch((error) => {
@@ -81,4 +90,20 @@ function signIn() {
 
       window.alert("Error : " + errorMessage);
     });
+}
+
+function changePass() {
+  var newPass = document.getElementById("newPass").value;
+  var newPassConfirm = document.getElementById("newPassConfirm").value;
+
+  if (newPass == newPassConfirm) {
+    user.updatePassword(newPassword).then(() => {
+      // Update successful.
+      window.alert("Password updated successfully");
+    }).catch((error) => {
+      // An error ocurred
+      window.alert("Error: " + error.message);
+    });
+  }
+  else { window.alert("Error: passwords don't match"); }
 }

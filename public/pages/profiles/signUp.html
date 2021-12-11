@@ -48,14 +48,14 @@
       <form id="registerForm">
         <input type="text" placeholder="email address" id="emailField" />
         <input type="password" placeholder="password" id="passwordField" />
+        <input type="password" placeholder="confirm password" id="passConfirm" />
         <button onclick="signUp()" type="submit">login</button>
         <p class="message">Already registered? <a href="signIn.html">Sign In</a></p>
       </form>
     </div>
   </div>
 
-  <script type="text/javascript" src="/firebaseInit.js"></script>
-  <script type="text/javascript" src="profiles.js"></script>
+  <script type="text/javascript" src="/public/js/profiles.js"></script>
   <script>
     var form = document.getElementById("registerForm");
     function handleForm(event) { event.preventDefault(); }
