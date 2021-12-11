@@ -94,6 +94,17 @@ app.get('/cookbookList', function (req, res) {
   });
 });
 
+app.post('/uid', function (req, res) {
+  var ref = admin.database().ref('mycookbooks/');
+
+  console.log(req.body);
+  ref.push ({
+    [req.body[0]]: {
+      Cookbooks: "cookbooks"
+    }
+  });
+});
+
 app.post('/cookbooks', function (req, res) {
   var ref = admin.database().ref('mycookbooks/')
   var cookbookName = req.body[0];

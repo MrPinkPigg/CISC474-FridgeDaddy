@@ -28,6 +28,7 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 
+
 function currUser() {
   console.log(firebase.auth().currentUser.email);
 }
@@ -37,9 +38,13 @@ function signOutBtn() {
 
   firebase.auth().signOut().then(() => {
     window.alert("Signed out " + tempUser);
+    localStorage.removeItem("uid");
     window.location.href = "/";
   }).catch((error) => {
-    window.alert("Error : " + error.message);
+    const errorCode = error.code;
+      const errorMessage = error.message;
+
+      window.alert("Error : " + errorMessage);
   });
 }
 
@@ -53,6 +58,22 @@ function signUp() {
     .then((userCredential) => {
       // Signed in 
       user = userCredential.user;
+      var uidArr = [user.uid];
+
+      $.ajax({
+        type: 'POST',
+        url: 'http://localhost:3000/uid',
+        data: JSON.stringify(uidArr),
+        contentType: "application/json",
+        
+        success: function (res) {
+            console.log("post success");
+        },
+        error: function (xhr, status, err) {
+            console.log(xhr.responseText);
+        }
+    });
+
       window.alert("Account created: " + user.email);
       window.location.href = "profile";
     })
@@ -80,6 +101,7 @@ function signIn() {
     .then((userCredential) => {
       // Signed in 
       user = userCredential.user;
+      localStorage.setItem("uid", userCredential.uid);
       window.alert("Signed In: " + user.email);
       window.location.href = "profile";
       // ...

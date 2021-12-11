@@ -46,6 +46,13 @@
     </nav>
 
     <div class="container my-5 pt-lg-5">
+        <div id="changePass">
+            <form id="changeForm">
+              <input type="password" placeholder="new password" id="newPass" />
+              <input type="password" placeholder="confirm new password" id="newPassConfirm" />
+              <button onclick="signUp()" type="submit">change password</button>
+            </form>
+          </div>
         <button onclick="signOutBtn()">Sign Out</button>
         <button onclick="currUser()">Current User</button>
     </div>
@@ -53,7 +60,7 @@
     <script type="text/javascript" src="/public/js/profiles.js"></script>
     <script>
         //document.getElementById("signInBtn").addEventListener("click", signIn, false)
-        var form = document.getElementById("loginForm");
+        var form = document.getElementById("changeForm");
         function handleForm(event) { event.preventDefault(); }
         form.addEventListener('submit', handleForm);
     </script>
