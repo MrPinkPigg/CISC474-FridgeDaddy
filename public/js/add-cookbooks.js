@@ -15,6 +15,7 @@ function addCookbook() {
     var recipes = document.getElementById("recipe-select").value;
 
     var selected = [];
+    selected.push(localStorage.getItem("uid"));
     selected.push(cookbookName);
     selected.push(cookbookDesc);
     for (var option of document.getElementById("recipe-select").options) {

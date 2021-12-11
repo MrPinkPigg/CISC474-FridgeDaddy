@@ -58,6 +58,7 @@ function signUp() {
     .then((userCredential) => {
       // Signed in 
       user = userCredential.user;
+      localStorage.setItem("uid", user.uid);
       var uidArr = [user.uid];
 
       $.ajax({

@@ -98,17 +98,17 @@ app.post('/uid', function (req, res) {
   var ref = admin.database().ref('mycookbooks/');
 
   console.log(req.body);
-  ref.push ({
+  /*ref.push ({
     [req.body[0]]: {
       Cookbooks: "cookbooks"
     }
-  });
+  });*/
 });
 
 app.post('/cookbooks', function (req, res) {
-  var ref = admin.database().ref('mycookbooks/')
-  var cookbookName = req.body[0];
-  var cookbookDesc = req.body[1];
+  var ref = admin.database().ref('mycookbooks/' + req.body[0] + '/');
+  var cookbookName = req.body[1];
+  var cookbookDesc = req.body[2];
 
   var recipes = req.body.slice(2);
 
