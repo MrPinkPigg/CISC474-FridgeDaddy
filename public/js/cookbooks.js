@@ -1,15 +1,25 @@
-$.ajax({
-    type: 'GET',
-    url: 'http://localhost:3000/cookbookList',
-    success: function(res) {
-        populateCookbooks(res);
-    },
-    error: function(xhr, status, err) {
-       console.log(xhr.responseText);
-    }
- });
+if (localStorage.getItem("uid") == null) {
+    location.href="signIn"
+}
+else {
+    var arr = [localStorage.getItem("uid")];
+    console.log(arr);
+    $.ajax({
+        type: 'GET',
+        url: 'http://localhost:3000/cookbookList?uid=' + localStorage.getItem("uid"),
+        // data: JSON.stringify(arr),
+        // contentType: "application/json",
+        success: function(res) {
+            populateCookbooks(res);
+        },
+        error: function(xhr, status, err) {
+           console.log(xhr.responseText);
+        }
+     });
+}
 
 function populateCookbooks(obj) {
+    console.log(obj);
     var parent = document.getElementById("cookbooks-container");
         //var jsonFile = JSON.parse(obj);
         var i = 0;
@@ -26,7 +36,7 @@ function populateCookbooks(obj) {
             var cookbookName = obj[key].Cookbook.CookbookName;
             var cookbookDesc = obj[key].Cookbook.CookbookDesc;
 
-            var cookbookDiv = '<div class="card mb-4 box-shadow">' + '<img class="card-img-top" src="/public/images/cookbook.jpeg" alt="Image of a cookbook">' + '<div class="card-body">' + '<h5 class="card-title">' + cookbookName + '</h5>' + '<p class="card-text">' + cookbookDesc + '<div class="d-flex justify-content-between align-items-center">' + '<div class="btn-group">' + '<button onclick="myFun(this.id)" id="' + cookbookName + '" type="button" class="btn btn-sm btn-outline-secondary view-cookbook-button">View' + '</button>' + '<button type="button" class="btn btn-sm btn-outline-secondary">Delete' + '</button>' + '</div>' + '<small class="text-muted">0 recipes</small>' + '</div>' + '</div>' + '</div>' + '</div>'
+            var cookbookDiv = '<div class="card mb-4 box-shadow">' + '<img class="card-img-top" src="/public/images/cookbook.jpeg" alt="Image of a cookbook">' + '<div class="card-body">' + '<h5 class="card-title">' + cookbookName + '</h5>' + '<p class="card-text">' + cookbookDesc + '<div class="d-flex justify-content-between align-items-center">' + '<div class="btn-group">' + '<button onclick="myFun(this.id)" id="' + cookbookName + '" type="button" class="btn btn-sm btn-outline-secondary view-cookbook-button">View' + '</button>' + '<button onclick="deleteCookbook(this.id)" id="' + cookbookName + '" type="button" class="btn btn-sm btn-outline-secondary">Delete' + '</button>' + '</div>' + '<small class="text-muted">0 recipes</small>' + '</div>' + '</div>' + '</div>' + '</div>'
 
             div.innerHTML = cookbookDiv;
             parent.appendChild(div);
@@ -55,5 +65,19 @@ function populateCookbooks(obj) {
 
 function myFun(id) {
     localStorage.setItem("cookbook_name", JSON.stringify(id));
-    location.href="public/pages/view-cookbook.html"
+    location.href="viewcookbook"
+}
+
+function deleteCookbook(id) {
+    $.ajax({
+        type: 'DELETE',
+        url: 'http://localhost:3000/cookbookDelete?uid=' + localStorage.getItem("uid") + "&recipeName=" + id,
+        success: function(res) {
+            console.log("delete success");
+        },
+        error: function(xhr, status, err) {
+           console.log(xhr.responseText);
+        }
+     });
+    location.reload();
 }
