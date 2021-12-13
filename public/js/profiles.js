@@ -102,7 +102,7 @@ function signIn() {
     .then((userCredential) => {
       // Signed in 
       user = userCredential.user;
-      localStorage.setItem("uid", userCredential.uid);
+      localStorage.setItem("uid", user.uid);
       window.alert("Signed In: " + user.email);
       window.location.href = "profile";
       // ...

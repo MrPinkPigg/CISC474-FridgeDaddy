@@ -47,7 +47,7 @@
             font-family: 'Josefin Sans', sans-serif;
         }
         input[type=text] {
-            width: 14%;
+            width: 42%;
             padding: 6px 10px;
             margin-bottom: 20px;
             font-family: 'Josefin Sans', sans-serif;
@@ -100,7 +100,7 @@
             <form id="add-cookbook-form">
                 <label for="cookbook_name">Cookbook Name</label>
                 <div class="cookbook-name-input">
-                    <input type="text" id="cookbook_name" name="cookbook_name"
+                    <input type="text" class="input-lg" id="cookbook_name" name="cookbook_name"
                         placeholder="Enter a name for your cookbook">
                 </div>
                 <label for="cookbook_recipes">Select Recipes</label>
@@ -117,7 +117,7 @@
                     </div>
                 </div>
                 <div class="add-cookbooks-buttons">
-                    <a href="/pages/cookbooks/cookbooks.html" class="btn btn-success my-2 btn-lg">Go Back</a>
+                    <a href="/cookbook" class="btn btn-success my-2 btn-lg">Go Back</a>
                     <button type="submit" class="btn btn-success my-2 btn-lg" id="addCookbookButton" onclick="addCookbook()">Add Cookbook</button>
                 </div>
             </form>

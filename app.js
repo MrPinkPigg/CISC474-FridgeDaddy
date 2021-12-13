@@ -4,7 +4,7 @@ const path = require('path');
 const router = express.Router();
 var admin = require("firebase-admin");
 //update to local path
-var serviceAccount = require("D:/cisc474/group/fridgedaddy-ud21-firebase-adminsdk-46k31-d8e3282848.json");
+var serviceAccount = require("/Users/aidanchao/fridgedaddy-ud21-firebase-adminsdk-46k31-8ea7205be6.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -82,7 +82,7 @@ app.get('/tags', function (req, res) {
 
 app.get('/cookbookList', function (req, res) {
   console.log("entering cookbook list)");
-  var ref = admin.database().ref('mycookbooks/');
+  var ref = admin.database().ref('mycookbooks/' + req.query["uid"] + "/");
   ref.on("value", function (snapshot) {
     try {
       return res.send(snapshot.val());
@@ -119,6 +119,27 @@ app.post('/cookbooks', function (req, res) {
       Recipes: recipes
     }
   });
+
+  return res.send("success");
+})
+
+app.delete('/cookbookDelete', function (req, res) {
+  var ref = admin.database().ref('mycookbooks/' + req.query["uid"] + '/');
+  ref.on("value", function (snapshot) {
+
+    for (var key in snapshot.val()) {
+      if (snapshot.val()[key].Cookbook.CookbookName == req.query["recipeName"]) {
+        ref = admin.database().ref('mycookbooks/' + req.query["uid"] + "/" + key);
+        console.log(ref);
+        break;
+      }
+    }
+
+  }, function (error) {
+    console.log("Error: " + error.code);
+  });
+
+  ref.remove();
 
   return res.send("success");
 })

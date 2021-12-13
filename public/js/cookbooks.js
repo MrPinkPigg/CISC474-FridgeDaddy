@@ -22,17 +22,18 @@ function populateCookbooks(obj) {
     console.log(obj);
     var parent = document.getElementById("cookbooks-container");
         //var jsonFile = JSON.parse(obj);
-        var i = 0;
-        for(var key in obj) {
-            console.log(obj[key].Cookbook.CookbookDesc);
-            for(var i = 0; i < obj[key].Cookbook.Recipes.length; i++) {
-                console.log(obj[key].Cookbook.Recipes[i]);
-            }
-        }
+        // var i = 0;
+        // for(var key in obj) {
+        //     //console.log(obj[key].Cookbook.CookbookDesc);
+        //     for(var i = 0; i < obj[key].Cookbook.Recipes.length; i++) {
+        //         console.log(obj[key].Cookbook.Recipes[i]);
+        //     }
+        // }
 
         for(var key in obj) {
             var div = document.createElement("div");
             div.classList.add("col-md-4");
+            console.log(obj[key]);
             var cookbookName = obj[key].Cookbook.CookbookName;
             var cookbookDesc = obj[key].Cookbook.CookbookDesc;
             var numRecipes = obj[key].Cookbook.Recipes.length - 1;
