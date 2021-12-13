@@ -18,6 +18,7 @@
 </head>
 
 <!-- <body class="bg-light"> -->
+    <!--Top navigation start -->
     <body style="background:rgb(163, 214, 163);">
     <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
         <div class="container-fluid">
@@ -42,19 +43,21 @@
                         <a class="nav-link text-white" href="../pages/Random.html">Browse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white">My Cookbooks</a>
+                        <a class="nav-link text-white" href="cookbook">My Cookbooks</a>
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <button class="btn btn-outline-light" type="submit">Log In</button>
+                    <button class="btn btn-outline-light" type="button" href="../../public/pages/profiles/signIn.html" onclick="signInBtn()">Profile</button>
                 </form>
             </div>
         </div>
     </nav>
+     <!--End of top navigation -->
+    <!--Recipe List Start  -->
     <div id="main" style="overflow: hidden;">
         <!-- list -->
         <div v-for="item in list" v-if="showList">
-            <div class="panel" style="overflow: hidden;background: rgb(217, 228, 157);">
+            <div class="panel" style="overflow: hidden;background: rgb(229, 233, 207);">
                 <div class="panel_img">
                     <el-image class="img" :src="item.picture"></el-image>
                 </div>
@@ -88,6 +91,7 @@
                 </div>
             </div>
         </div>
+         <!--End of recipe list -->
 
 
     <!-- details -->
@@ -183,6 +187,7 @@
             </ol>
         </div>
     </div>
+     <!--Detail over -->
 
     <!-- print -->
     <div v-if="showPrint" style="padding-bottom:10px;">
