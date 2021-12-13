@@ -11,7 +11,7 @@
   <title>Sign up</title>
 </head>
 
-<body class="bg-light">
+<body class="bg-light" onload="checkPage()">
   <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand text-white" href="#">
@@ -28,7 +28,7 @@
       <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+            <a class="nav-link text-white" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="#">Browse</a>
@@ -51,13 +51,19 @@
         <input type="password" placeholder="password" id="passwordField" />
         <input type="password" placeholder="confirm password" id="passConfirm" />
         <button onclick="signUp()" type="submit">login</button>
-        <p class="message">Already registered? <a href="signIn.html">Sign In</a></p>
+        <p class="message">Already registered? <a href="signIn">Sign In</a></p>
       </form>
     </div>
   </div>
 
   <script type="text/javascript" src="/public/js/profiles.js"></script>
   <script>
+    function checkPage() {
+      if (localStorage.getItem("uid") != null) {
+        location.href = "profile"
+      }
+    }
+
     var form = document.getElementById("registerForm");
     function handleForm(event) { event.preventDefault(); }
     form.addEventListener('submit', handleForm);

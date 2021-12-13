@@ -8,10 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/profiles.js"></script>
     <title>My profile</title>
 </head>
 
-<body class="bg-light">
+<body class="bg-light" onload="checkPage()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="#">
@@ -29,7 +30,7 @@
             <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+                        <a class="nav-link text-white" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">Browse</a>
@@ -46,19 +47,31 @@
     </nav>
 
     <div class="container my-5 pt-lg-5">
+
+        <h1>My Profile</h1>
+        <p id="userInfo"></p>
+
         <div id="changePass">
             <form id="changeForm">
-              <input type="password" placeholder="new password" id="newPass" />
-              <input type="password" placeholder="confirm new password" id="newPassConfirm" />
-              <button onclick="signUp()" type="submit">change password</button>
+                <input type="password" placeholder="new password" id="newPass" />
+                <input type="password" placeholder="confirm new password" id="newPassConfirm" />
+                <button onclick="changePass()" type="submit">change password</button>
             </form>
-          </div>
+        </div>
         <button onclick="signOutBtn()">Sign Out</button>
         <button onclick="currUser()">Current User</button>
+
+        <button onclick="deleteAcct()">Delete account</button>
     </div>
 
-    <script type="text/javascript" src="/public/js/profiles.js"></script>
+
     <script>
+        function checkPage() {
+            if (localStorage.getItem("uid") == null) {
+                location.href = "signIn"
+            }
+            userInfo();
+        }
         //document.getElementById("signInBtn").addEventListener("click", signIn, false)
         var form = document.getElementById("changeForm");
         function handleForm(event) { event.preventDefault(); }
