@@ -22,6 +22,8 @@ $.ajax({
 });
 
 function generate(cookbookObj, recipeObj) {
+    console.log(cookbookObj);
+    console.log(recipeObj);
     var cookbookNameLS = JSON.parse(localStorage.getItem("cookbook_name"));
     for (var key in cookbookObj) {
         console.log(cookbookObj[key].Cookbook.CookbookName);
