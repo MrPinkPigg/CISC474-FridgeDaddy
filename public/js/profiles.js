@@ -10,35 +10,51 @@ const firebaseConfig = {
 };
 
 const auth = firebase.auth(firebase.initializeApp(firebaseConfig));
-let user = firebase.auth().currentUser;
+let user = null; //firebase.auth().currentUser;
 
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
+firebase.auth().onAuthStateChanged((userCredentials) => {
+  if (userCredentials) {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
-    var uid = user.uid;
+    //var uid = user.uid;
+    user = userCredentials;
+    localStorage.setItem("uid", user.uid);
+    localStorage.setItem("email", user.email);
     console.log("signed in");
     //console.log(user.email);
     //window.location.href = "profile";
     // ...
   } else {
     // User is signed out
+    localStorage.clear();
     console.log("signed out");
     //window.location.href = "signIn";
   }
 });
 
-
 function currUser() {
-  console.log(firebase.auth().currentUser.email);
+  console.log(user.email);
 }
 
+function userInfo() {
+  //var username = localStorage.getItem("username"); //firebase.auth().currentUser.displayName;
+  var email = localStorage.getItem("email"); //firebase.auth().currentUser.email;
+  //let verified = "" //firebase.auth().currentUser.emailVerified;
+
+  document.getElementById("userInfo").innerHTML = email;
+}
+
+
 function signOutBtn() {
-  var tempUser = firebase.auth().currentUser.email;
+  var tempUser = user.email;
 
   firebase.auth().signOut().then(() => {
     window.alert("Signed out " + tempUser);
-    localStorage.removeItem("uid");
+
+    //localStorage.removeItem("uid");
+    //localStorage.removeItem("username");
+    //localStorage.removeItem("email");
+    
     window.location.href = "/";
   }).catch((error) => {
     const errorCode = error.code;
@@ -54,13 +70,26 @@ function signUp() {
   var passConfirm = document.getElementById("passConfirm").value;
 
   if (userPassword == passConfirm) {
-  auth.createUserWithEmailAndPassword(userEmail, userPassword)
+  firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword)
     .then((userCredential) => {
-      // Signed in 
-      user = userCredential.user;
-      localStorage.setItem("uid", user.uid);
-      var uidArr = [user.uid];
+      // Signed iup
+      user = userCredential;
 
+      /*
+      user.updateProfile({
+        displayName: user.email
+      }).then(()=> {
+        console.log("username set");
+      }).catch((error) => {
+        console.log(error.message);
+      });
+      */
+
+      //localStorage.setItem("uid", user.uid);
+      //localStorage.setItem("username", user.displayName);
+      //localStorage.setItem("email", user.email);
+
+      var uidArr = [user.uid];
       $.ajax({
         type: 'POST',
         url: 'http://localhost:3000/uid',
@@ -75,7 +104,7 @@ function signUp() {
         }
     });
 
-      window.alert("Account created: " + user.email);
+      window.alert("Account created: " + userEmail);
       window.location.href = "profile";
     })
     .catch((error) => {
@@ -91,7 +120,7 @@ function signUp() {
 
 /*
 TEST LOGIN:
-aaronknestaut@gmail.com
+account@test.com
 testAccount
 */
 function signIn() {
@@ -102,7 +131,11 @@ function signIn() {
     .then((userCredential) => {
       // Signed in 
       user = userCredential.user;
-      localStorage.setItem("uid", user.uid);
+
+      //localStorage.setItem("uid", user.uid);
+      //localStorage.setItem("username", user.displayName);
+      //localStorage.setItem("email", user.email);
+
       window.alert("Signed In: " + user.email);
       window.location.href = "profile";
       // ...
@@ -120,7 +153,7 @@ function changePass() {
   var newPassConfirm = document.getElementById("newPassConfirm").value;
 
   if (newPass == newPassConfirm) {
-    user.updatePassword(newPassword).then(() => {
+    user.updatePassword(newPass).then(() => {
       // Update successful.
       window.alert("Password updated successfully");
     }).catch((error) => {
@@ -129,4 +162,24 @@ function changePass() {
     });
   }
   else { window.alert("Error: passwords don't match"); }
+}
+
+function changeName() {
+  var newName = document.getElementById("newName").value;
+
+  user.updateProfile(newName).then(() => {
+    window.alert("Display name updated sucessfully");
+  }).catch((error) => {
+    window.alert("Error: " + error.message);
+  })
+}
+
+function deleteAcct() {
+  user.delete().then(() => {
+    window.alert("Account deleted");
+    localStorage.clear();
+    window.location.href = "/";
+  }).catch((error) => {
+    window.alert("Error: " + error.message);
+  })
 }
