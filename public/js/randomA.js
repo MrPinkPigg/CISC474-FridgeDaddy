@@ -17,7 +17,7 @@ $.ajax({
 			showInfo: false,
 			showPrint: false,
 			showSave: false,
-			itemInfo: { //
+			itemInfo: { //this is for recepies informations
 				"type": "",
 				"name": "",
 				"grade": "",
@@ -30,9 +30,9 @@ $.ajax({
 			list: [{
 					"type": "Meats",
 					"name": "Pizza",
-					"grade": 3.1,
+					"grade": 4.1,
 					"picture": "../../public/images/pizza.png",
-					"describe": "Perreroni pizza by werewolf pizza",
+					"describe": "Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients, which is then baked at a high temperature, traditionally in a wood-fired oven. A small pizza is sometimes called a pizzetta",
 					"materials": [{
 							"name": 'flour',
 							"text": '500g'
@@ -72,13 +72,13 @@ $.ajax({
 						},
 						{
 							"name": '4',
-							"text": 'Leave your covered dough  to sit for 24 hours at room temperature. It should double in size and you’ll see bubbles start to form'
+							"text": 'Leave your covered dough  to sit for 24 hours at room temperature. It should double in size and you will see bubbles start to form'
 						}
 					]
 				}, {
 					"type": "Meats",
 					"name": "Hot Chicken Fried Steak Sando",
-					"grade": 3.5,
+					"grade": 3.8,
 					"picture": "../../public/images/hotChicken.png",
 					"describe": "Hot Chicken Fried Steak Sando(MEGHAN ROBBINS CHEF-SUPERPOINT",
 					"materials": [{
@@ -105,7 +105,7 @@ $.ajax({
 					"steps": [{
 							"name": '1',
 							"text": `Butterfly the pieces of steak. 
-                    Lay between two pieces of parchment paper and pound flat (if you don’t have a mallet just use the bottom of a heavy pot or pan).`
+                    Lay between two pieces of parchment paper and pound flat (if you don't have a mallet just use the bottom of a heavy pot or pan).`
 
 						},
 						{
@@ -145,7 +145,7 @@ $.ajax({
                     1 tsp ground cumin
                     1 ½ tsp dried oregano-1 white onion (peeled)
                     8 garlic cloves (peeled)
-                    -1/2 bunch culantro (or cilantro in you don’t
+                    -1/2 bunch culantro (or cilantro in you don't
                     have)
                     6 trinidad pimentos (tops removed)
                     1 green pepper (top removed and deseeded)
@@ -177,7 +177,7 @@ $.ajax({
 							"name": '2',
 							"text": `Method
             In medium pot add oil and then all ingredients in first column. 
-            Let cook on low until the chilis just start to release some colour (about 5 minutes on low). In a food processor puree all ingredients except tomatillos, hominy and water.
+            Let cook on low until the chilis just start to release some colour (about 5 minutes on low). In a food processor puree all ingredients except tomatillos, hominy and water.
             
             `
 						},
@@ -199,7 +199,7 @@ $.ajax({
 				}, {
 					"type": "Seafood",
 					"name": "Albacore Tuna ",
-					"grade": 3.1,
+					"grade": 4.1,
 					"picture": "../../public/images/tuna.png",
 					"describe": "ALBACORE TUNA WITH BOK CHOY, TOFU, COCONUT BROTH AND ANISE ASH -BRENT MAXWELL CHEF - LA SOCIÉTÉ",
 					"materials": [{
@@ -246,7 +246,7 @@ $.ajax({
 				}, {
 					"type": "ChinaType",
 					"name": "Mui Chuy Kow Yuk",
-					"grade": 2.7,
+					"grade": 5.0,
 					"picture": "../../public/images/china.png",
 					"describe": "This is a Chinese recipe",
 					"materials": [{

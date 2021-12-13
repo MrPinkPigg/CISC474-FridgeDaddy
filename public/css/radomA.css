@@ -152,7 +152,10 @@
         background-color: #FAEBD7;
     }
     .print_top{
-        height: 180px;
+        height: 240px;
+        /* overflow: hidden;  Print Details The description is displayed outside the border solution */
+        padding-bottom:10px;
+        box-sizing: border-box;
         border-bottom: 2px solid gray;
     }
     .print_top_right_info{

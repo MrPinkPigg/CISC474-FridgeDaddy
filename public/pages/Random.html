@@ -16,7 +16,9 @@
     <link rel="stylesheet" type="text/css" href="../../public/css/new.css">
     <title>Document</title>
 </head>
-<body class="bg-light">
+
+<!-- <body class="bg-light"> -->
+    <body style="background:rgb(163, 214, 163);">
     <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="#">
@@ -49,10 +51,10 @@
             </div>
         </div>
     </nav>
-    <div id="main">
+    <div id="main" style="overflow: hidden;">
         <!-- list -->
         <div v-for="item in list" v-if="showList">
-            <div class="panel">
+            <div class="panel" style="overflow: hidden;background: rgb(217, 228, 157);">
                 <div class="panel_img">
                     <el-image class="img" :src="item.picture"></el-image>
                 </div>
