@@ -47,23 +47,25 @@
     </nav>
 
     <div class="container my-5 pt-lg-5">
-
-        <h1>My Profile</h1>
-        <p id="userInfo"></p>
-
-        <div id="changePass">
-            <form id="changeForm">
-                <input type="password" placeholder="new password" id="newPass" />
-                <input type="password" placeholder="confirm new password" id="newPassConfirm" />
-                <button onclick="changePass()" type="submit">change password</button>
-            </form>
-        </div>
-
-        <button onclick="signOutBtn()">Sign Out</button>
         <!--<button onclick="currUser()">Current User</button>-->
-        <button onclick="deleteAcct()">Delete account</button>
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-4 fw-bold lh-1 pb-4">My Profile</h1>
+                <p class="lead pb-4" id="userInfo"></p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                    <div id="changePass">
+                        <form id="changeForm">
+                            <input type="password" placeholder="new password" id="newPass" />
+                            <input type="password" placeholder="confirm new password" id="newPassConfirm" />
+                            <button class="btn btn-outline-success btn-lg px-4" onclick="changePass()" type="submit">change password</button>
+                        </form>
+                    </div>
+                    <button  class="btn btn-success btn-lg px-4 me-md-2 fw-bold" onclick="signOutBtn()">Sign Out</button>
+                    <button  class="btn btn-success btn-lg px-4 me-md-2 fw-bold" onclick="deleteAcct()">Delete account</button>
+                </div>
+            </div>
+        </div>
     </div>
-
 
     <script>
         function checkPage() {

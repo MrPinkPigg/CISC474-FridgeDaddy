@@ -45,14 +45,21 @@
   </nav>
 
   <div class="container my-5 pt-lg-5">
-    <div id="loginDiv">
-      <form id="loginForm">
-        <input type="text" placeholder="email address" id="emailField" />
-        <input type="password" placeholder="password" id="passwordField" />
-        <button onclick="signIn()" type="submit" id="signInBtn">login</button>
-        <p class="message">Not registered? <a href="signUp">Create an account</a></p>
-      </form>
-    </div>
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-4 fw-bold lh-1 pb-4">Sign in</h1>
+          <p class="lead pb-4" id="userInfo"></p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+            <div id="loginDiv">
+              <form id="loginForm">
+                <input type="text" placeholder="email address" id="emailField" />
+                <input type="password" placeholder="password" id="passwordField" />
+                <button onclick="signIn()" type="submit" id="signInBtn">login</button>
+                <p class="message">Not registered? <a href="signUp">Create an account</a></p>
+              </form>
+            </div>
+          </div>
+      </div>
   </div>
 
   <script type="text/javascript" src="/public/js/profiles.js"></script>
