@@ -4,7 +4,7 @@ const path = require('path');
 const router = express.Router();
 var admin = require("firebase-admin");
 //update to local path
-var serviceAccount = require("C:/Users/Aaron Knestaut/Documents/College/cisc474/CISC474-FridgeDaddy/fridgedaddy-ud21-firebase-adminsdk-46k31-bffc819e83.json");
+var serviceAccount = require("/Users/Madison/Desktop/styling/CISC474-FridgeDaddy/fridgedaddy-ud21-firebase-adminsdk-46k31-9e4b55cf21.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -55,6 +55,14 @@ router.get('/Random', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/pages/Random.html'));
 });
 
+router.get('/fridges', function (req, res) {
+  res.sendFile(path.join(__dirname + '/public/pages/fridges.html'));
+});
+
+router.get('/viewfridges', function (req, res) {
+  res.sendFile(path.join(__dirname + '/public/pages/view-fridge.html'));
+});
+
 app.get('/recipes', function (req, res) {
   var ref = admin.database().ref('recipes/recipe/');
   ref.on("value", function (snapshot) {
@@ -94,6 +102,20 @@ app.get('/cookbookList', function (req, res) {
   });
 });
 
+app.get('/fridgesList', function (req, res) {
+  console.log("fridges list");
+  var ref = admin.database().ref('myfridges/');
+  ref.on("value", function (snapshot) {
+    try {
+      return res.send(snapshot.val());
+    } catch {
+      console.log("Headers already sent")
+    }
+  }, function (error) {
+    console.log("Error: " + error.code);
+  });
+});
+
 app.post('/uid', function (req, res) {
   var ref = admin.database().ref('mycookbooks/');
 
@@ -120,6 +142,31 @@ app.post('/cookbooks', function (req, res) {
     }
   });
 
+  return res.send("success");
+})
+
+app.post('/fridges', function (req, res) {
+  var ref = admin.database().ref('myfridges/' + req.body[0] + '/');
+  var fridgeName = req.body[1];
+  var fridgeCollaborators = req.body[2];
+  var fruit = req.body[3];
+  var vegetable = req.body[4];
+  var grain = req.body[5];
+  var meat = req.body[6];
+  var fish = req.body[7];
+  var dairy = req.body[8];
+  ref.push ({
+    Fridge: {
+      FridgeName: fridgeName,
+      FridgeCollaborators: fridgeCollaborators,
+      FridgeFruit: fruit,
+      FridgeVegetable: vegetable,
+      FridgeGrain: grain,
+      FridgeMeat: meat,
+      FridgeFish: fish,
+      FridgeDairy: dairy
+    }
+  });
   return res.send("success");
 })
 
