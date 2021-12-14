@@ -38,6 +38,8 @@ function addCookbook() {
         }
     });
 
+    location.href="cookbook"
+
 }
 
 function populateRecipes(recipes) {
