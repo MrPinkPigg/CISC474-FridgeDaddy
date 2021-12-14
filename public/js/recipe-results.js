@@ -57,3 +57,7 @@ function makeCards(obj) {
         });
     }
 }
+
+function signInBtn(){
+    window.location.href = "signIn";
+}

@@ -22,17 +22,17 @@
           <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+                <a class="nav-link text-white" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="../../public/pages/Random.html">Browse</a>
+                <a class="nav-link text-white" href="Random">Browse</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="cookbook">My Cookbooks</a>
               </li>
             </ul>
             <form class="d-flex">
-              <button class="btn btn-outline-light" type="button" onclick="signInBtn()">Profile</button>
+              <a class="btn btn-outline-light" href="signIn">Profile</a>
             </form>
           </div>
         </div>
@@ -44,7 +44,7 @@
             <h1 class="display-4 fw-bold lh-1 pb-4">Your ingredients, our recipes.</h1>
             <p class="lead pb-4">Simply add the ingredients you have on hand, and we'll search our databases to find the recipes you can make right away. Create cookbooks with your favorites, and share them with friends and family! Save. Cook. Share. Repeat.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-              <button type="button" class="btn btn-success btn-lg px-4 me-md-2 fw-bold">Search</button>
+              <button type="button" class="btn btn-success btn-lg px-4 me-md-2 fw-bold" onclick="window.scrollTo(0,document.body.scrollHeight);">Search</button>
               <button type="button" class="btn btn-outline-success btn-lg px-4" onclick="signInBtn()">Log In</button>
             </div>
           </div>
